@@ -1,4 +1,4 @@
-import Layout from 'components/Layout';
+import Layout from 'containers/Layout';
 import Head from 'next/head';
 import { getArticle, getListOfArticles } from 'services/articles';
 
