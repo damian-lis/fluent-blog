@@ -6,7 +6,7 @@ export default function About() {
     <Layout>
       <section className="relative py-16">
         <div className="max-w-4xl px-4 m-auto">
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-2xl rounded-lg mt-10">
+          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-2xl border border-gray-200 rounded-lg mt-10">
             <div className="px-6">
               <div className="flex flex-wrap justify-center">
                 <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
@@ -22,14 +22,14 @@ export default function About() {
                   Damian Lis
                 </h3>
                 <div className="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
-                  <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>
+                  <i className="fas fa-map-marker-alt mr-2 text-lg text-blue-900"></i>
                   Wrocław
                 </div>
                 <div className="mb-2 text-gray-700 mt-7">
-                  <i className="fas fa-briefcase mr-2 text-lg text-gray-500"></i>
-                  <p>I am a Software Developer</p>
-                  <p>who creates web applications,</p>
-                  <p>services and many other web solutions</p>
+                  <i className="fas fa-briefcase mr-2 text-lg text-blue-900 "></i>
+                  <p className="my-1.5">I am a Software Developer</p>
+                  <p className="my-1.5">who creates web applications,</p>
+                  <p className="my-1.5">services and many other web solutions</p>
                 </div>
               </div>
               <div className="mt-10 py-10 border-t border-gray-300 text-center">
