@@ -1,5 +1,6 @@
 import Layout from 'containers/Layout';
 import Head from 'next/head';
+import Image from 'next/image';
 import { getArticle, getListOfArticles } from 'services/articles';
 
 export const getStaticPaths = async () => {
@@ -27,10 +28,15 @@ export default function Article({ article }) {
         <title>{article.title}</title>
         <link href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css" rel="stylesheet" />
       </Head>
-      <div>
-        <h1 className="text-center text-3xl mb-10">{article.title}</h1>
+      <div className="flex flex-col ">
+        <img
+          src={article.cover}
+          alt="Blog Cover"
+          className="object-fill mx-auto rounded-lg rounded w-full max-w-xl mt-10"
+        />
+        <h1 className="text-center text-3xl mb-5 mt-10">{article.title}</h1>
         <div
-          className="max-w-3xl mx-auto articleBody"
+          className="max-w-3xl w-full mx-auto articleBody text-justify "
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
       </div>

@@ -10,8 +10,6 @@ tags:
   - redux
 ---
 
-Article copied from https://dev.to/asayerio_techblog/is-redux-dead-1d2a
-
 React revolutionized front end development as most people knew it when it was first released. This new approach to writing code triggered incredible innovation in how to handle state changes and UI updates.
 
 This revolution had its downsides, too. One of them was a culture of over-engineering solutions to challenges that could be solved in simpler ways. A typical example of this is how state has been managed in React applications.
@@ -49,3 +47,5 @@ module.exports = {
   }
 };
 ```
+
+Article copied from **[here](https://dev.to/asayerio_techblog/is-redux-dead-1d2a)**
