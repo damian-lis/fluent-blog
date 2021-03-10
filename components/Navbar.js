@@ -57,8 +57,8 @@ export default function Navbar() {
                       className={`${
                         router.pathname === link.path
                           ? ' bg-yellow-400 text-blue-900'
-                          : 'hover:bg-yellow-400 hover:text-blue-900'
-                      }  text-gray-300  px-3 py-2 my-2 rounded-md text-sm font-medium navlink`}>
+                          : 'hover:text-yellow-400 hover:underline'
+                      }  text-white  px-3 py-2 my-2 rounded-md text-sm font-medium navlink`}>
                       {link.label}
                     </a>
                   </Link>
@@ -76,7 +76,7 @@ export default function Navbar() {
               <Link href={link.path} key={link.id}>
                 <a
                   className={`${
-                    router.pathname === link.path ? ' bg-gray-900' : ''
+                    router.pathname === link.path ? ' bg-yellow-400 text-blue-900' : ''
                   }  text-white block px-3 py-2 rounded-md text-base font-medium`}>
                   {link.label}
                 </a>
