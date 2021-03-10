@@ -24,8 +24,8 @@ export default function Home({ articles }) {
         {articles.map((article, idx) => (
           <div
             key={idx}
-            className="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
-            <div className="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+            className="transition-all duration-150 flex justify-center w-full px-4 py-6 md:w-1/2 lg:w-1/3">
+            <div className="max-w-md flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
               <div className="md:flex-shrink-0">
                 <Image
                   src={article.cover}
@@ -44,7 +44,7 @@ export default function Home({ articles }) {
                 </div>
               </div>
               <hr className="border-gray-300" />
-              <div className="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+              <div className="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto sm:max-h-12 ">
                 <Link href={`/articles/${article.slug}`}>
                   <a className="hover:underline">
                     <h2 className="text-1xl font-bold tracking-normal text-gray-800">
