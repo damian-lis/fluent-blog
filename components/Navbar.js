@@ -19,7 +19,7 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-blue-900">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -56,8 +56,8 @@ export default function Navbar() {
                     <a
                       className={`${
                         router.pathname === link.path
-                          ? ' bg-gray-900'
-                          : 'hover:bg-gray-700 hover:text-white'
+                          ? ' bg-yellow-400 text-blue-900'
+                          : 'hover:bg-yellow-400 hover:text-blue-900'
                       }  text-gray-300  px-3 py-2 my-2 rounded-md text-sm font-medium navlink`}>
                       {link.label}
                     </a>
