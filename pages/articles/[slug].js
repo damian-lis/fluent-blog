@@ -1,7 +1,9 @@
+import { useContext, useEffect } from 'react';
 import Layout from 'containers/Layout';
 import Head from 'next/head';
 import Image from 'next/image';
 import { getArticle, getListOfArticles } from 'services/articles';
+import LoadingContext from 'contexts/loading';
 
 export const getStaticPaths = async () => {
   const articles = getListOfArticles('_articles');
@@ -22,6 +24,12 @@ export const getStaticProps = async (req) => {
 };
 
 export default function Article({ article }) {
+  const { setLoad } = useContext(LoadingContext.store);
+
+  useEffect(() => {
+    setLoad(false);
+  }, [setLoad]);
+
   return (
     <Layout>
       <Head>

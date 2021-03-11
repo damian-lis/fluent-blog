@@ -1,8 +1,9 @@
-// import Layout from 'components/Layout';
+import { useContext } from 'react';
 import Layout from 'containers/Layout';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import LoadingContext from 'contexts/loading';
 
 import { getListOfArticles } from 'services/articles';
 
@@ -15,6 +16,8 @@ export const getStaticProps = () => {
 };
 
 export default function Home({ articles }) {
+  const { setLoad } = useContext(LoadingContext.store);
+
   return (
     <Layout>
       <Head>
@@ -46,7 +49,7 @@ export default function Home({ articles }) {
               <hr className="border-gray-300" />
               <div className="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto sm:max-h-12 ">
                 <Link href={`/articles/${article.slug}`}>
-                  <a className="hover:underline">
+                  <a onClick={() => setLoad(true)} className="hover:underline">
                     <h2 className="text-1xl font-bold tracking-normal text-gray-800">
                       {article.title}
                     </h2>
