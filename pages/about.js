@@ -9,11 +9,13 @@ export default function About() {
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-2xl border border-gray-200 rounded-lg mt-10">
             <div className="px-6">
               <div className="flex flex-wrap justify-center">
-                <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                  <img
+                <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center -mt-20">
+                  <Image
                     alt="avatar"
                     src="/photo/avatar.jpg"
-                    className="shadow-2xl rounded-full h-auto align-middle border-none -mt-20 "
+                    height={150}
+                    width={150}
+                    className=" rounded-full h-auto align-middle border-none "
                   />
                 </div>
               </div>
