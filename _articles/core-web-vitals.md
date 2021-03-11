@@ -33,7 +33,7 @@ Specifically, these are defined as the Core Web Vitals:
 
 <img class="mk-image" src="/articles/corewebvitals/chart.webp">
 
-<div class="mk-quote">“These signals measure how users perceive the experience of interacting with a web page and contribute to our ongoing work to ensure people get the most helpful and enjoyable experiences from the web.”</div>
+<div class="mk-detail">“These signals measure how users perceive the experience of interacting with a web page and contribute to our ongoing work to ensure people get the most helpful and enjoyable experiences from the web.”</div>
 
 Core Web Vitals are subject to change from year to year as user expectations of web pages change.
 
