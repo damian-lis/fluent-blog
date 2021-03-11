@@ -36,7 +36,7 @@ export default function Article({ article }) {
         <title>{article.title}</title>
         <link href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css" rel="stylesheet" />
       </Head>
-      <div className="flex flex-col ">
+      <div className="flex flex-col p-5">
         <div className=" mx-auto mt-10">
           <Image
             src={article.cover}
@@ -47,7 +47,7 @@ export default function Article({ article }) {
           />
         </div>
 
-        <h1 className="text-center text-3xl mb-5 mt-10">{article.title}</h1>
+        <h1 className="text-center text-4xl mb-5 mt-10 ">{article.title}</h1>
         <div
           className="max-w-3xl w-full mx-auto articleBody text-justify "
           dangerouslySetInnerHTML={{ __html: article.content }}
