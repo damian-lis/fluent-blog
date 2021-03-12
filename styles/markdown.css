@@ -6,8 +6,7 @@
 }
 
 .articleBody h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 30px;
   font-size:25px;
   font-weight:bold;
 }
@@ -30,6 +29,10 @@
   .articleBody a {
     color: #1e3a8a;
   }
+
+  .articleBody a:hover{
+    text-decoration: underline;
+  }
   
   
   .articleBody ul {
@@ -38,18 +41,23 @@
     margin-left:30px;
   }
 
+  .articleBody li {
+    margin:5px 0;
+    list-style-type: disc;
+  }
+
 
   .md-image{
     margin:30px 0;
    
   }
 
-  .md-html{
+  .md-code{
     background-color: rgb(206, 206, 206);
     border-radius: 5px;
-    color:red;
-    padding:2px 4px;
-    font-size:14px;
+    color:rgb(253, 54, 54);
+    padding:3px 5px;
+    font-size:16px;
   }
 
   
@@ -62,4 +70,3 @@
     width:100%;
   }
 
- 
