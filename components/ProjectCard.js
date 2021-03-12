@@ -15,8 +15,14 @@ export default ({ project, TagComponent }) => {
             <div className="mt-2 text-gray-700">
               <p>{project.description}</p>
             </div>
+            {project.link &&(
+              <>
+             
+              <a target="blank" className="text-sm my-5 text-blue-800  inline-block bg-gray-100 py-1 px-2 rounded-md hover:underline" href={project.link}> <i className="fab fa-github "></i> Check repository</a>
+            </>
+            ) }
             {TagComponent && (
-              <div className="mt-5">
+              <div>
                 {project.tags.map((tag, tagId) => (
                   <TagComponent key={tagId} tag={tag} />
                 ))}
