@@ -10,7 +10,7 @@ tags:
 
 ## 1. Introduction
 
-Many of you probably use React CLI, better known as **create-react-app (CRA)**, to get your apps up and running; there are many advantages to this approach. However, building with CRA also has a few disadvantages; for example, when you view source of a webpage from a web app initialized with CRA, you will notice that it’s an almost empty page with just the <span class="md-html">```<head>```</span> section but hardly anything within <span class="md-html">```<body>```</span>.
+Many of you probably use React CLI, better known as **create-react-app (CRA)**, to get your apps up and running; there are many advantages to this approach. However, building with CRA also has a few disadvantages; for example, when you view source of a webpage from a web app initialized with CRA, you will notice that it’s an almost empty page with just the <span class="md-code">```<head>```</span> section but hardly anything within <span class="md-code">```<body>```</span>.
 
 For example:
 
