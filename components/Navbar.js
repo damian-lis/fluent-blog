@@ -13,13 +13,12 @@ export default function Navbar() {
 
   const handleMobileMenu = () => {
     setMobileMenu((prevState) => !prevState);
-    console.log(mobileMenu);
   };
 
   const router = useRouter();
 
   return (
-    <nav className="fixed w-full bg-blue-900 z-10">
+    <nav className="fixed w-full bg-blue-900 z-10 border-b-2 border-yellow-300 rounded-b-xl ">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -53,8 +52,8 @@ export default function Navbar() {
                     <a
                       className={`${
                         router.pathname === link.path
-                          ? ' bg-yellow-400 text-blue-900'
-                          : 'hover:text-yellow-400 hover:underline'
+                          ? ' bg-yellow-300 text-blue-900'
+                          : 'hover:text-yellow-300 hover:underline'
                       }  text-white  px-3 py-2 my-2 rounded-md text-sm font-medium navlink`}>
                       {link.label}
                     </a>
@@ -66,14 +65,15 @@ export default function Navbar() {
         </div>
       </div>
 
-      {mobileMenu && (
-        <div className="sm:hidden">
+    
+        <div className={`transition-all duration-500 ${mobileMenu? "h-36"  : "h-0 "} sm:hidden overflow-hidden  rounded-b-xl sm:rounded-b-none`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navLinks.map((link) => (
               <Link href={link.path} key={link.id}>
                 <a
+                  onClick={()=>setMobileMenu(false)}
                   className={`${
-                    router.pathname === link.path ? ' bg-yellow-400 text-blue-900' : ''
+                    router.pathname === link.path ? ' bg-yellow-300 text-blue-900' : ''
                   }  text-white block px-3 py-2 rounded-md text-base font-medium`}>
                   {link.label}
                 </a>
@@ -81,7 +81,7 @@ export default function Navbar() {
             ))}
           </div>
         </div>
-      )}
+      
     </nav>
   );
 }
