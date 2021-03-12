@@ -19,7 +19,7 @@ export default function Projects({ projects }) {
       </Head>
       <Layout>
         <div>
-          <h1 className="text-center text-3xl mb-10 mt-10">PROJECTS</h1>
+          <h1 className="text-center text-3xl mb-10 mt-10">MY PROJECTS</h1>
           <ul className="mb-8">
             {projects.map((project) => (
               <ProjectCard key={project.title} project={project} TagComponent={Tag} />
