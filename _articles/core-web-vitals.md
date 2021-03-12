@@ -14,7 +14,7 @@ tags:
 
 Google is announcing Core Web Vitals will become ranking signals in May 2021 in an update that will also combine existing UX-related signals.
 
-<img class="mk-image" src="/articles/corewebvitals/composition.jpg">
+<img class="md-image" src="/articles/corewebvitals/composition.jpg">
 
 The ‘page experience’ signal combines Core Web Vitals with the following signals:
 * Mobile-friendliness
@@ -31,9 +31,9 @@ Specifically, these are defined as the Core Web Vitals:
 - **Cumulative Layout Shift**: The amount of unexpected layout shift of visual page content. An ideal measurement is **less than 0.1**.
 
 
-<img class="mk-image" src="/articles/corewebvitals/chart.webp">
+<img class="md-image" src="/articles/corewebvitals/chart.webp">
 
-<div class="mk-detail">“These signals measure how users perceive the experience of interacting with a web page and contribute to our ongoing work to ensure people get the most helpful and enjoyable experiences from the web.”</div>
+<div class="md-detail">“These signals measure how users perceive the experience of interacting with a web page and contribute to our ongoing work to ensure people get the most helpful and enjoyable experiences from the web.”</div>
 
 Core Web Vitals are subject to change from year to year as user expectations of web pages change.
 

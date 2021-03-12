@@ -10,13 +10,13 @@ tags:
 
 ## 1. Introduction
 
-Many of you probably use React CLI, better known as **create-react-app (CRA)**, to get your apps up and running; there are many advantages to this approach. However, building with CRA also has a few disadvantages; for example, when you view source of a webpage from a web app initialized with CRA, you will notice that it’s an almost empty page with just the <span class="mk-html">```<head>```</span> section but hardly anything within <span class="mk-html">```<body>```</span>.
+Many of you probably use React CLI, better known as **create-react-app (CRA)**, to get your apps up and running; there are many advantages to this approach. However, building with CRA also has a few disadvantages; for example, when you view source of a webpage from a web app initialized with CRA, you will notice that it’s an almost empty page with just the <span class="md-html">```<head>```</span> section but hardly anything within <span class="md-html">```<body>```</span>.
 
 For example:
 
-<img class="mk-image" src="/articles/serverSideRenderingInReact/createReactApp.png">
+<img class="md-image" src="/articles/serverSideRenderingInReact/createReactApp.png">
 
-<span class="mk-detail bold">React app initialized using create-react-app.</span>
+<span class="md-detail font-bold">React app initialized using create-react-app.</span>
 
 This is because CRA renders your app on the client side, meaning the built .js file is first downloaded to the user’s browser before the rest of the page starts loading. This increases the initial load time, and some web crawlers are unable to index the site.
 
@@ -52,7 +52,7 @@ Faster load times lead to a better experience for the end user. This is one of t
 
 By now, you have probably heard that Google now crawls web apps built with JavaScript, you are better off having server-side rendered content ready for Google and other search engines to crawl your site. Per 10up:
 
-<span class="mk-detail ">Note that as of now, Google and Bing can index synchronous JavaScript applications — synchronous being the key word. If your app starts with a loading spinner, then fetches content via Ajax, the crawler will only wait a few seconds for loading to complete. This means if you have content fetched asynchronously on pages where SEO is important, SSR might be necessary.</span>
+<span class="d-detail ">Note that as of now, Google and Bing can index synchronous JavaScript applications — synchronous being the key word. If your app starts with a loading spinner, then fetches content via Ajax, the crawler will only wait a few seconds for loading to complete. This means if you have content fetched asynchronously on pages where SEO is important, SSR might be necessary.</span>
 
 The advantage with SSR is that you get the benefits of a traditional website’s SEO since the entire page can now be crawled by bots.
 
@@ -80,7 +80,7 @@ You may be used to this if you worked with PHP. In addition to the community and
 
 Razzle, a project by Jared Palmer, has been gaining a lot of traction lately. From **its GitHub page**:
 
-<span class="mk-detail">“Razzle is a tool that abstracts all complex configuration needed for SSR into a single dependency — giving you the awesome developer experience of create-react-app, but then leaving the rest of your app’s architectural decisions about frameworks, routing, and data fetching up to you.”</span>
+<span class="md-detail">“Razzle is a tool that abstracts all complex configuration needed for SSR into a single dependency — giving you the awesome developer experience of create-react-app, but then leaving the rest of your app’s architectural decisions about frameworks, routing, and data fetching up to you.”</span>
 
 It’s easy to get started with Razzle, and it uses React Router 4 by default (unlike Next.js, which does not have a router out of the box).
 
