@@ -2,7 +2,7 @@
 title: Server side rendering in React
 description: In this article, we will talk about server-side rendering in React, and the benefits versus traditional client-side rendering.
 cover: /covers/serverSideRenderingInReact.png
-date: 02-10-2021
+date: 03-11-2021
 tags:
   - react
   - webdev
