@@ -1,4 +1,4 @@
-import { Navbar, Footer, Loader } from 'components';
+import { Navbar, Footer, Loader, BtnTopScroll } from 'components';
 
 export default ({ children }) => {
   return (
@@ -9,6 +9,8 @@ export default ({ children }) => {
         <main className="min-h-screen">{children}</main>
       </div>
       <Footer />
+      <BtnTopScroll/>
+  
     </>
   );
 };
