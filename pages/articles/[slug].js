@@ -47,7 +47,8 @@ export default function Article({ article }) {
           />
         </div>
 
-        <h1 className="text-center text-4xl mb-5 mt-10 ">{article.title}</h1>
+        <h1 className="text-center text-4xl mb-3 mt-10 ">{article.title}</h1>
+        <span className="text-center  text-gray-700 italic">{article.date}</span>
         <div
           className="max-w-3xl w-full mx-auto articleBody text-justify "
           dangerouslySetInnerHTML={{ __html: article.content }}
