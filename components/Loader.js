@@ -27,7 +27,7 @@ export default () => {
         <p className="mt-4 text-lg leading-relaxed text-white">Wczytuję artykuł...</p>
         {showInfo && (
           <p className="px-5 text-center mt-1 text-lg leading-relaxed text-white">
-            Strona ładuje się dłuzej niz zwyklę... Prosimy o cierpliwość!
+            Strona ładuje się dłużej niż zwykle... Prosimy o cierpliwość!
           </p>
         )}
       </div>
