@@ -67,7 +67,7 @@ export default function Navbar() {
 
       <div
         className={`transition-all duration-500 ${
-          mobileMenu ? 'h-36' : 'h-0 '
+          mobileMenu ? 'h-40' : 'h-0 '
         } sm:hidden overflow-hidden  rounded-b-xl sm:rounded-b-none`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
           {navLinks.map((link) => (
