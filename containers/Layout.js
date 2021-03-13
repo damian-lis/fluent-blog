@@ -10,8 +10,7 @@ export default ({ children }) => {
         <main className="min-h-screen ">{children}</main>
       </div>
       <Footer />
-      <BtnTopScroll/>
-  
+      <BtnTopScroll />
     </>
   );
 };

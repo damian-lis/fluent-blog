@@ -4,6 +4,6 @@ import Navbar from 'components/Navbar';
 import Loader from 'components/Loader';
 import ProjectCard from 'components/ProjectCard';
 import Tag from 'components/Tag';
-import BtnTopScroll from "components/BtnTopScroll"
+import BtnTopScroll from 'components/BtnTopScroll';
 
 export { ArticleCard, Footer, Navbar, Loader, ProjectCard, Tag, BtnTopScroll };

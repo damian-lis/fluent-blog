@@ -17,10 +17,11 @@ Google is announcing Core Web Vitals will become ranking signals in May 2021 in 
 <img class="md-image" src="/articles/corewebvitals/composition.jpg">
 
 The ‘page experience’ signal combines Core Web Vitals with the following signals:
-* Mobile-friendliness
-* Safe-browsing
-* HTTPS-security
-* Intrusive interstitial guidelines
+
+- Mobile-friendliness
+- Safe-browsing
+- HTTPS-security
+- Intrusive interstitial guidelines
 
 Core Web Vitals were introduced earlier this and are designed to measure how users experience the speed, responsiveness, and visual stability of a page.
 
@@ -29,7 +30,6 @@ Specifically, these are defined as the Core Web Vitals:
 - **Largest Contentful** Paint: The time it takes for a page’s main content to load. An ideal LCP measurement is **2.5 seconds** or faster.
 - **First Input Delay**: The time it takes for a page to become interactive. An ideal measurement is less than **100 ms**.
 - **Cumulative Layout Shift**: The amount of unexpected layout shift of visual page content. An ideal measurement is **less than 0.1**.
-
 
 <img class="md-image" src="/articles/corewebvitals/chart.webp">
 
@@ -41,7 +41,7 @@ Core Web Vitals are subject to change from year to year as user expectations of 
 &nbsp;
 &nbsp;
 
-## 2. New Labels in Search Results 
+## 2. New Labels in Search Results
 
 Google may add labels in search results that indicate which results provide a good page experience.
 
@@ -59,7 +59,7 @@ Google has a total of 6 ways to measure Core Web Vitals.
 
 For what it’s worth, Google recommends AMP as an easy and cost-effective way to optimize for the page experience signal.
 
-“The majority of the AMP pages achieve great page experiences,” Google says. 
+“The majority of the AMP pages achieve great page experiences,” Google says.
 
 &nbsp;
 &nbsp;

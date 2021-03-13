@@ -1,6 +1,6 @@
 import LoadingContext from 'contexts/loading';
 import 'styles/tailwind.css';
-import "styles/markdown.css"
+import 'styles/markdown.css';
 import 'styles/index.css';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';

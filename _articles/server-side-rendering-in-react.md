@@ -10,7 +10,7 @@ tags:
 
 ## 1. Introduction
 
-Many of you probably use React CLI, better known as **create-react-app (CRA)**, to get your apps up and running; there are many advantages to this approach. However, building with CRA also has a few disadvantages; for example, when you view source of a webpage from a web app initialized with CRA, you will notice that it’s an almost empty page with just the <span class="md-code">```<head>```</span> section but hardly anything within <span class="md-code">```<body>```</span>.
+Many of you probably use React CLI, better known as **create-react-app (CRA)**, to get your apps up and running; there are many advantages to this approach. However, building with CRA also has a few disadvantages; for example, when you view source of a webpage from a web app initialized with CRA, you will notice that it’s an almost empty page with just the <span class="md-code">`<head>`</span> section but hardly anything within <span class="md-code">`<body>`</span>.
 
 For example:
 
@@ -42,7 +42,7 @@ The initial page is rendered from the server, meaning the subsequent pages load 
 
 In addition to the above benefit, here are some other advantages you get when you move to SSR:
 
-###  Performance
+### Performance
 
 **Arunoda Susiripala**, an engineer from Vercel, **talks about performance** being the main reason for moving to server-side rendering. SSR means there is no need for loaders or spinners for the initial load. This means that, generally speaking, **SSR will outperform CSR**.
 
@@ -109,9 +109,11 @@ The short answer would be no. Not all apps need server-side rendering, especiall
 Most importantly, SSR React apps cost a lot more in terms of resources since you need to keep a Node server up and running. There are times you may be better off going the serverless route when you want to choose server-side rendering for your React applications.
 
 ## 7. Conclusion
+
 Client-side rendered React apps are great but having apps rendered on the server have noticeable benefits.
 
 As we covered in this post, the benefits include:
+
 - Performance
 - Search engine visibility
 - Social sharing

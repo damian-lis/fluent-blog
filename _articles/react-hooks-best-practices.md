@@ -9,8 +9,6 @@ tags:
   - hooks
 ---
 
-
-
 <span class="md-detail">This React Hooks tutorial was last updated in January 2021 to include more React Hooks best practices and examples.</span>
 
 React Hooks have a very simple API, but given its massive community and variety of use cases, questions are bound to arise around React Hooks best practices and how to solve common problems.
@@ -23,7 +21,7 @@ This React Hooks cheat sheet includes a lot of code snippets and assumes some Ho
 
 Included in this React Hooks cheat sheet are best practices related to the following Hooks:
 
-- useState 
+- useState
 - useEffect
 - useContext
 - useLayoutEffect
@@ -31,8 +29,6 @@ Included in this React Hooks cheat sheet are best practices related to the follo
 - useCallback
 - useMemo
 - useRef
-
-
 
 ### UseState
 
@@ -44,8 +40,8 @@ Declaring a state variable is as simple as calling <span class="md-code">useStat
 
 ```js
 const DeclareStateVar = () => {
-  const [count] = useState(100)
-  return <div> State variable is {count}</div>
+  const [count] = useState(100);
+  return <div> State variable is {count}</div>;
 };
 ```
 
@@ -61,8 +57,8 @@ Here’s the code responsible for the screencast above:
 
 ```js
 const UpdateStateVar = () => {
-  const [age, setAge] = useState(19)
-  const handleClick = () => setAge(age + 1)
+  const [age, setAge] = useState(19);
+  const handleClick = () => setAge(age + 1);
 
   return (
     <div>
@@ -71,13 +67,13 @@ const UpdateStateVar = () => {
         <button onClick={handleClick}>Get older! </button>
       </div>
     </div>
-  )
+  );
 };
 ```
 
-#### Why does the React  <span class="md-code">useState</span> Hook not update immediately?
+#### Why does the React <span class="md-code">useState</span> Hook not update immediately?
 
-React  <span class="md-code">useState</span> and  <span class="md-code">setState</span> don’t make changes directly to the state object; they create queues to optimize performance, which is why the changes don’t update immediately.
+React <span class="md-code">useState</span> and <span class="md-code">setState</span> don’t make changes directly to the state object; they create queues to optimize performance, which is why the changes don’t update immediately.
 
 #### React Hooks and multiple state variables
 
@@ -89,14 +85,11 @@ Here’s the code responsible for the screencast above:
 
 ```js
 const MultipleStateVars = () => {
-  const [age, setAge] = useState(19)
-  const [siblingsNum, setSiblingsNum] = 
-    useState(10)
+  const [age, setAge] = useState(19);
+  const [siblingsNum, setSiblingsNum] = useState(10);
 
-  const handleAge = () => setAge(age + 1)
-  const handleSiblingsNum = () => 
-      setSiblingsNum(siblingsNum + 1)
- 
+  const handleAge = () => setAge(age + 1);
+  const handleSiblingsNum = () => setSiblingsNum(siblingsNum + 1);
 
   return (
     <div>
@@ -104,15 +97,11 @@ const MultipleStateVars = () => {
       <p>I have {siblingsNum} siblings</p>
 
       <div>
-        <button onClick={handleAge}>
-          Get older! 
-        </button>
-        <button onClick={handleSiblingsNum}>
-            More siblings! 
-        </button>
+        <button onClick={handleAge}>Get older!</button>
+        <button onClick={handleSiblingsNum}>More siblings!</button>
       </div>
     </div>
-  )
+  );
 };
 ```
 
@@ -126,11 +115,11 @@ Note that you have to pass the entire object to the <span class="md-code">useSta
 // 🐢 setState (object merge) vs useState (object replace)
 // assume initial state is {name: "Ohans"}
 
-setState({ age: 'unknown' })
+setState({ age: 'unknown' });
 // new state object will be
 // {name: "Ohans", age: "unknown"}
 
-useStateUpdater({ age: 'unknown' })
+useStateUpdater({ age: 'unknown' });
 // new state object will be
 // {age: "unknown"} - initial object is replaced
 ```
@@ -142,13 +131,13 @@ Here’s the code for the screencast above:
 
 ```js
 const StateObject = () => {
-  const [state, setState] = useState({ age: 19, siblingsNum: 4 })
-  const handleClick = val =>
+  const [state, setState] = useState({ age: 19, siblingsNum: 4 });
+  const handleClick = (val) =>
     setState({
       ...state,
       [val]: state[val] + 1
-    })
-  const { age, siblingsNum } = state
+    });
+  const { age, siblingsNum } = state;
 
   return (
     <div>
@@ -157,14 +146,13 @@ const StateObject = () => {
 
       <div>
         <button onClick={handleClick.bind(null, 'age')}>Get older!</button>
-        <button onClick={handleClick.bind(null, 'siblingsNum')}>
-          More siblings!
-        </button>
+        <button onClick={handleClick.bind(null, 'siblingsNum')}>More siblings!</button>
       </div>
     </div>
-  )
+  );
 };
 ```
+
 #### Initialize state from function
 
 As opposed to just passing an initial state value, state could also be initialized from a function, as shown below:
@@ -172,11 +160,11 @@ As opposed to just passing an initial state value, state could also be initializ
 ```js
 const StateFromFn = () => {
   const [token] = useState(() => {
-    let token = window.localStorage.getItem("my-token");
-    return token || "default#-token#"
-  })
+    let token = window.localStorage.getItem('my-token');
+    return token || 'default#-token#';
+  });
 
-  return <div>Token is {token}</div>
+  return <div>Token is {token}</div>;
 };
 ```
 
@@ -185,35 +173,29 @@ const StateFromFn = () => {
 The updater function returned from invoking <span class="md-code">useState</span> can also take a function similar to the good ol’ <span class="md-code">setState</span>:
 
 ```js
-const [value, updateValue] = useState(0)
+const [value, updateValue] = useState(0);
 // both forms of invoking "updateValue" below are valid 👇
 updateValue(1);
-updateValue(previousValue => previousValue + 1);
+updateValue((previousValue) => previousValue + 1);
 ```
 
 This is ideal when the state update depends on some previous value of state.
 
  <img class="md-image" src="/articles/reactHooks/setStateUpdates.gif">
 
- <span class="md-detail">A counter with functional setState updates.</span>
+<span class="md-detail">A counter with functional setState updates.</span>
 
- Here’s the code for the screencast above:
+Here’s the code for the screencast above:
 
- ```js
- const CounterFnSetState = () => {
+```js
+const CounterFnSetState = () => {
   const [count, setCount] = useState(0);
   return (
     <>
       <p>Count value is: {count}</p>
       <button onClick={() => setCount(0)}>Reset</button>
-      <button 
-        onClick={() => setCount(prevCount => prevCount + 1)}>
-        Plus (+)
-      </button>
-      <button 
-        onClick={() => setCount(prevCount => prevCount - 1)}>
-       Minus (-)
-      </button>
+      <button onClick={() => setCount((prevCount) => prevCount + 1)}>Plus (+)</button>
+      <button onClick={() => setCount((prevCount) => prevCount - 1)}>Minus (-)</button>
     </>
   );
 };
@@ -224,5 +206,3 @@ Here’s a **[live, editable useState cheat sheet](https://react-hooks-cheatshee
 Article part copied from **[here](https://blog.logrocket.com/react-hooks-cheat-sheet-unlock-solutions-to-common-problems-af4caf699e70/#usestate)**.
 
 If you want to know the rest of react hooks, check out **[this article](https://blog.logrocket.com/react-hooks-cheat-sheet-unlock-solutions-to-common-problems-af4caf699e70/#usestate)**.
-
-

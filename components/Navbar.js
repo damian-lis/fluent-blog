@@ -65,23 +65,24 @@ export default function Navbar() {
         </div>
       </div>
 
-    
-        <div className={`transition-all duration-500 ${mobileMenu? "h-36"  : "h-0 "} sm:hidden overflow-hidden  rounded-b-xl sm:rounded-b-none`}>
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navLinks.map((link) => (
-              <Link href={link.path} key={link.id}>
-                <a
-                  onClick={()=>setMobileMenu(false)}
-                  className={`${
-                    router.pathname === link.path ? ' bg-yellow-300 text-blue-900' : ''
-                  }  text-white block px-3 py-2 rounded-md text-base font-medium`}>
-                  {link.label}
-                </a>
-              </Link>
-            ))}
-          </div>
+      <div
+        className={`transition-all duration-500 ${
+          mobileMenu ? 'h-36' : 'h-0 '
+        } sm:hidden overflow-hidden  rounded-b-xl sm:rounded-b-none`}>
+        <div className="px-2 pt-2 pb-3 space-y-1">
+          {navLinks.map((link) => (
+            <Link href={link.path} key={link.id}>
+              <a
+                onClick={() => setMobileMenu(false)}
+                className={`${
+                  router.pathname === link.path ? ' bg-yellow-300 text-blue-900' : ''
+                }  text-white block px-3 py-2 rounded-md text-base font-medium`}>
+                {link.label}
+              </a>
+            </Link>
+          ))}
         </div>
-      
+      </div>
     </nav>
   );
 }

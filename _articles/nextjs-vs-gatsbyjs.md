@@ -15,6 +15,7 @@ tags:
 Next.js vs. GatsbyJS is a showdown for the ages … at least as far as React web frameworks are concerned.
 
 Since its inception, React has grown to such a point that it’s no longer used for just frontend web development anymore. It’s now used to develop:
+
 - Desktop applications along with Electron
 - Simple browser-based games
 - VR apps using React 360
@@ -59,6 +60,7 @@ Whether Gatsby or Next.js creates the faster web application depends on the use 
 ## Use cases
 
 I believe in horses for the courses. So we will choose the best option between Gatsby and Next.js for these use cases:
+
 - Simple static website
 - Large multi-user sites like **[dev.to](https://dev.to/)** (published in real time)
 - Client-side rendered applications (SPA/MPA)
@@ -66,7 +68,8 @@ I believe in horses for the courses. So we will choose the best option between G
 
 ## Next.js vs. GatsbyJS for simple static websites
 
- **Requirements:**
+**Requirements:**
+
 - A static site with tens of static webpages
 - Some pages are updated often; most of them are not updated regularly
 - It should support SEO
@@ -74,6 +77,7 @@ I believe in horses for the courses. So we will choose the best option between G
 - Updates doesn’t need to reflect real time since its updated by internal team, not by the visiting user.
 
 **Examples:**
+
 - Any static websites (companies, service websites, Information sites)
 - Public pages for any product websites
 - Individuals’ blog websites
@@ -90,6 +94,7 @@ Next.js won’t handle anything related to your data. You’ll need to build you
 **Verdict: Gatsby**
 
 Gatsby is our winner to build faster, performant static websites. The developer experience is the key for making this conclusion:
+
 - Developers can focus on website layout and styling
 - Gatsby separates the data and allows non-developers to edit content
 - Gatsby also shortens the development lifecycle with a wide range of Gatsby plugins, starters, and themes
@@ -97,11 +102,13 @@ Gatsby is our winner to build faster, performant static websites. The developer 
 ## Next.js vs. GatsbyJS for large, multi-user websites
 
 **Requirements:**
+
 - A large website with content added by authenticated users
 - The website content are public, only certain features are private
 - Content will be shown based on logged-in user and their interests
 
 **Examples:**
+
 - dev.to, a multi-user blog site for developers, by developers
 - Any online forums
 
@@ -126,11 +133,13 @@ In such cases, build time-based frameworks won’t work well.
 ## Next.js vs. GatsbyJS for client-side rendered applications (SPA/MPA)
 
 **Requirements:**
+
 - Building a web application for your product, whether it’s an SPA or a multi-page client-side application
 - The application will be visible only after authentication
 - SEO is not necessary; the whole application is dynamic
 
 **Examples:**
+
 - Trello
 - Asana
 - Gmail
@@ -177,6 +186,7 @@ We have also used Next.js for simple dynamic websites (not the same scale as the
 ## Next.js vs. GatsbyJS for hybrid web apps
 
 **Examples:**
+
 - Twitter
 - Reddit
 - Stack Overflow
@@ -202,5 +212,3 @@ Both Gatsby and Next.js are awesome frameworks. I would say both are winners, bu
 I’d encourage you to check their docs for more information .Hope you enjoying reading the article, let me know what you think of both frameworks and your firsthand experience with them in the comment box. 🤗
 
 Article part copied from **[here](https://blog.logrocket.com/next-js-vs-gatsbyjs-a-developers-perspective/)**.
-
-
