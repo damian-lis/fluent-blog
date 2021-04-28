@@ -1,7 +1,7 @@
 ---
 title: Immer vs Ramda -
 description: Two approaches towards writing Redux reducers
-cover: /covers/immerVsRamda.png
+cover: /images/covers/immerVsRamda.png
 date: 02-20-2021
 tags:
   - immer

@@ -1,7 +1,7 @@
 ---
 title: Server side rendering in React
 description: In this article, we will talk about server-side rendering in React, and the benefits versus traditional client-side rendering.
-cover: /covers/serverSideRenderingInReact.png
+cover: /images/covers/serverSideRenderingInReact.png
 date: 03-11-2021
 tags:
   - react
@@ -14,7 +14,7 @@ Many of you probably use React CLI, better known as **create-react-app (CRA)**, 
 
 For example:
 
-<img class="md-image" src="/articles/serverSideRenderingInReact/createReactApp.png">
+<img class="md-image" src="/images/articles/serverSideRenderingInReact/createReactApp.png">
 
 <span class="md-detail font-bold">React app initialized using create-react-app.</span>
 

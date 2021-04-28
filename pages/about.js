@@ -12,7 +12,7 @@ export default function About() {
                 <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center -mt-20">
                   <Image
                     alt="avatar"
-                    src="/photo/avatar.jpg"
+                    src="/images/photo/avatar.jpg"
                     height={150}
                     width={150}
                     className=" rounded-full h-auto align-middle border-none "

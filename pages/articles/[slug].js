@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
-import Layout from 'containers/Layout';
 import Head from 'next/head';
 import Image from 'next/image';
+import Layout from 'containers/Layout';
 import { getArticle, getListOfArticles } from 'services/articles';
 import LoadingContext from 'contexts/loading';
 
@@ -28,7 +28,7 @@ export default function Article({ article }) {
 
   useEffect(() => {
     setLoad(false);
-  }, [setLoad]);
+  }, []);
 
   return (
     <Layout>

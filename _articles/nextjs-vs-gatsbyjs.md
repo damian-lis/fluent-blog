@@ -1,7 +1,7 @@
 ---
 title: Next.js vs Gatsby.js.
 description: In this article we are going to examine two of the most famous React frameworks - Gatsby and Next.js.
-cover: /covers/nextVsGatsby.png
+cover: /images/covers/nextVsGatsby.png
 date: 03-12-2021
 tags:
   - react

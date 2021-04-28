@@ -1,7 +1,7 @@
 ---
 title: Is Redux really Dead?
 description: Context, hooks, and why it solved much of what Redux did
-cover: /covers/isReduxDead.jpeg
+cover: /images/covers/isReduxDead.jpeg
 date: 02-10-2021
 tags:
   - react

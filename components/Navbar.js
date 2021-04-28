@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button onClick={handleMobileMenu} type="button" className=" p-2 focus:outline-none">
-              <img className="block h-6 w-6" src="/icons/hamburger.svg" />
+              <img className="block h-6 w-6" src="/images/icons/hamburger.svg" />
             </button>
           </div>
 
@@ -33,12 +33,12 @@ export default function Navbar() {
                 <a>
                   <img
                     className="block hidden sm:block h-11 w-auto"
-                    src="/icons/fluentblog.svg"
+                    src="/images/icons/fluentblog.svg"
                     alt="FluentBlog"
                   />
                   <img
                     className="block sm:hidden h-11 w-auto"
-                    src="/icons/fluentblogmobile.svg"
+                    src="/images/icons/fluentblogmobile.svg"
                     alt="FluentBlog"
                   />
                 </a>

@@ -1,7 +1,7 @@
 ---
 title: React hooks - Best practices.
 description: In this tutorial, we’ll outline some React Hooks best practices and highlight some use cases with examples, from simple to advanced scenarios.
-cover: /covers/reactHooks.png
+cover: /images/covers/reactHooks.png
 date: 03-12-2021
 tags:
   - react
@@ -49,7 +49,7 @@ const DeclareStateVar = () => {
 
 Updating a state variable is as simple as invoking the updater function returned by the <span class="md-code">useState</span> invocation: <span class="md-code">const [stateValue, updaterFn] = useState(initialStateValue);</span>.
 
-<img class="md-image" src="/articles/reactHooks/updateStateVariable.gif">
+<img class="md-image" src="/images/articles/reactHooks/updateStateVariable.gif">
 
 <span class="md-detail">Note how the age state variable is being updated.</span>
 
@@ -79,7 +79,7 @@ React <span class="md-code">useState</span> and <span class="md-code">setState</
 
 Multiple state variables may be used and updated from within a functional component, as shown below:
 
-<img class="md-image" src="/articles/reactHooks/multipleStateVariables.gif">
+<img class="md-image" src="/images/articles/reactHooks/multipleStateVariables.gif">
 
 Here’s the code responsible for the screencast above:
 
@@ -124,7 +124,7 @@ useStateUpdater({ age: 'unknown' });
 // {age: "unknown"} - initial object is replaced
 ```
 
-<img class="md-image" src="/articles/reactHooks/objectStateVariable.gif">
+<img class="md-image" src="/images/articles/reactHooks/objectStateVariable.gif">
 <span class="md-detail">Multiple state objects updated via a state object variable.</span>
 
 Here’s the code for the screencast above:
@@ -181,7 +181,7 @@ updateValue((previousValue) => previousValue + 1);
 
 This is ideal when the state update depends on some previous value of state.
 
- <img class="md-image" src="/articles/reactHooks/setStateUpdates.gif">
+ <img class="md-image" src="/images/articles/reactHooks/setStateUpdates.gif">
 
 <span class="md-detail">A counter with functional setState updates.</span>
 
