@@ -4,25 +4,14 @@ export default () => {
   const [isShow, setIsShow] = useState(false);
   const [isFooter, setIsFooter] = useState(false);
 
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const handleScrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  const handleSetFooter = () => {
-    if (window.innerHeight + window.scrollY + 25 >= document.body.offsetHeight) {
-      setIsFooter(true);
-    } else {
-      setIsFooter(false);
-    }
-  };
+  const handleSetFooter = () =>
+    window.innerHeight + window.scrollY + 25 >= document.body.offsetHeight
+      ? setIsFooter(true)
+      : setIsFooter(false);
 
-  const handleShowScrollBtn = () => {
-    if (window.scrollY > 200) {
-      setIsShow(true);
-    } else {
-      setIsShow(false);
-    }
-  };
+  const handleShowScrollBtn = () => (window.scrollY > 200 ? setIsShow(true) : setIsShow(false));
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
