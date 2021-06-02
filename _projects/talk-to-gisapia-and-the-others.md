@@ -1,6 +1,6 @@
 ---
-title: Talk to Gisapia and the Others - game
-description: This app will let you chat with amazing characters who will remember and understand your answers and send them to your e-mail.
+title: Talk to Gisapia and the Others
+description: It is an app in the form of bilingual chat bot that allows You to chat with various amazing characters who remember, understand and send information about You to Your email! (support by Emails Handler app).
 date: 05-01-2021
 link: https://github.com/damian-lis/Talk-to-Gisapia-and-the-Others
 tags:
