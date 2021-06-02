@@ -76,7 +76,7 @@ The list of the most interesting solutions in this project is presented below:
 
 &nbsp; &nbsp; &nbsp; &nbsp; 4.1.1. Basic configuration<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; 4.1.2. TailwindCSS and its configuration<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; 4.1.3. The structure of folders in the project and their descriptions<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; 4.1.3. The structure of folders in the project and their descriptions
 
 <br/>
 
@@ -93,8 +93,6 @@ The list of the most interesting solutions in this project is presented below:
 ## 4.1. General
 
 In this section, I will focus on the general description of the various solutions that have been introduced in the project.
-
-<br/>
 
 ### 4.1.1. Basic configuration
 
@@ -187,7 +185,6 @@ node_modules
 ```
 
 <br/>
-<br/>
 
 ### 4.1.2. TailwindCSS and its configuration
 
@@ -241,7 +238,6 @@ module.exports = {
 };
 ```
 
-<br/>
 <br/>
 
 ### 4.1.3. The structure of folders in the project
@@ -316,13 +312,10 @@ The folder structure in the project is as follows (folders with an underline "\_
 
 <br/>
 <br/>
-<br/>
 
 ## 4.2. Specific
 
 In this section, I will focus on a more detailed description of the various functionalities that have been introduced in the project
-
-<br/>
 
 ### 4.2.1. Adding data related to portfolio projects dynamically
 
@@ -697,7 +690,6 @@ Below is a visual example of a dynamically generated article:
 ![](public/images/readme/articleExample.gif)
 
 <br/>
-<br/>
 
 ### 4.2.3. A button that allows to quickly return to the top of the page
 
@@ -791,7 +783,6 @@ export default ({ children }) => {
 
 As we can see in the example above, it is a component that appears alongside other major components such as Navbar and Footer, which are available on every page.
 
-<br/>
 <br/>
 
 ### 4.2.4. A loader before displaying a specific article
