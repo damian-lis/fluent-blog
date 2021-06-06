@@ -1,14 +1,18 @@
 # FluentBlog
 
-Desktop version:
+### Desktop version:
 
 ![](public/images/readme/intro.gif)
 
 <br/>
 
-Mobile version:
+### Mobile version:
 
 ![](public/images/readme/introMobile.gif)
+
+<br/>
+
+### Live version is available [here](https://fluent-blog.vercel.app/).
 
 <br/>
 
@@ -25,8 +29,6 @@ Mobile version:
 
 The site is dedicated to blogging about the IT industry and it contains various articles, author's description and completed projects for the portfolio.
 
-### Live version is available [here](https://fluent-blog.vercel.app/).
-
 <br/>
 
 ## 2. Technologies
@@ -41,6 +43,8 @@ The following technologies were used in the project:
 ## 3. Setup
 
 First of all, you need to make sure you have [Node.js](https://nodejs.org/en/) installed.
+
+<br/>
 
 If you have Node.js installed use the following command:
 
@@ -72,20 +76,27 @@ The entire project was created using Next and TailwindCSS technologies due to th
 
 The list of the most interesting solutions in this project is presented below:
 
-### &nbsp; &nbsp; 4.1. General: <br/>
+<br/>
 
-&nbsp; &nbsp; &nbsp; &nbsp; 4.1.1. Basic configuration<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; 4.1.2. TailwindCSS and its configuration<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; 4.1.3. The structure of folders in the project and their descriptions
+### 4.1. General: <br/>
+
+&nbsp; 4.1.1. Basic configuration
+
+&nbsp; 4.1.2. TailwindCSS and its configuration
+
+&nbsp; 4.1.3. The structure of folders in the project and their descriptions
 
 <br/>
 
-### &nbsp; &nbsp; 4.2. Specific: <br/>
+### 4.2. Specific: <br/>
 
-&nbsp; &nbsp; &nbsp; &nbsp; 4.2.1. Adding data related to portfolio projects dynamically <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; 4.2.2. A dynamic way of creating a page with the content of an article <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; 4.2.3. A button that allows to quickly return to the top of the page<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; 4.2.4. A loader before displaying a specific article <br/>
+&nbsp; 4.2.1. Adding data related to portfolio projects dynamically
+
+&nbsp; 4.2.2. A dynamic way of creating a page with the content of an article
+
+&nbsp; 4.2.3. A button that allows to quickly return to the top of the page
+
+&nbsp; 4.2.4. A loader before displaying a specific article
 
 <br/>
 <br/>
@@ -93,6 +104,8 @@ The list of the most interesting solutions in this project is presented below:
 ## 4.1. General
 
 In this section, I will focus on the general description of the various solutions that have been introduced in the project.
+
+<br/>
 
 ### 4.1.1. Basic configuration
 
@@ -199,8 +212,6 @@ Below is an example of using this framework for an div html element:
 
 <div className="relative border-yellow-900"></div>
 ```
-
-<br/>
 
 In the example above, the following styles have been added to the div element:
 
@@ -317,6 +328,8 @@ The folder structure in the project is as follows (folders with an underline "\_
 
 In this section, I will focus on a more detailed description of the various functionalities that have been introduced in the project
 
+<br/>
+
 ### 4.2.1. Adding data related to portfolio projects dynamically
 
 Next js allows us to add data to the page in a dynamic way. For this process, files with the markdown extension will be used, in which we can write various texts as in a regular text editor, but we can also save different data as in a normal database.
@@ -328,7 +341,7 @@ At the very beginning, I would like to focus on the possibility of dynamic addin
 An example of one of the markdown files with mentioned data is shown below:
 
 ```
-//_projects/portfolio-website.md file:
+<!-- _projects/portfolio-website.md file: -->
 
 ---
 title: Portfolio website
@@ -346,9 +359,7 @@ As we can see above, we have different attributes and their values (tittle, desc
 
 <br/>
 
-To display mentioned data from markdown files on the page, we need logic that will parse this data for us.
-
-Below is example of the function (backend logic) that make it possible:
+To display mentioned data from markdown files on the page, we need logic that will parse this data for us. Below is example of the function (backend logic) that make it possible:
 
 ```
 //lib/markdownParser.js file:
@@ -375,7 +386,7 @@ In the case of the getList function we have the following logic:
 
 - the function takes a path parameter (e.g. projects from which we will extract files),
 - variable directory, to which the specific folder path is returned (e.g. \_projects), which, thanks to the use of the process.cwd function, always starts in the folder in which NodeJS works (allows to avoid errors on other devices),
-- the files variable, to which the file names of the previously read folder were returned (array)
+- the files variable, to which the file names of the previously read folder were returned (array),
 - finally, the discussed function returns an array with objects that contains parsed data based on iteration over predetermined files (this data was read using the gray-matter library).
 
 <br/>
@@ -464,6 +475,8 @@ In this subsection, I'd like to focus on extending the functionality that was di
 First, an example markdown file containing information about the article is presented below:
 
 ```
+<!-- _articles/immer-vs-ramda.md file: -->
+
 ---
 title: Immer vs Ramda -
 description: Two approaches towards writing Redux reducers
@@ -573,11 +586,13 @@ In the case of the getFileBySlug async function we have the following logic:
 
 - the appropriate article path and slug are passed to the function,
 - a path to our articles folder is created (directory variable),
-- the full path to the article is created (fullPath variable)
-- the content of this file is processed (content as markdownContent) and converted to html (matter library)
+- the full path to the article is created (fullPath variable),
+- the content of this file is processed (content as markdownContent) and converted to html (matter library),
 - a content variable is created with an empty string assigned (in case the specific file has no content),
-- if there is content in a specific file, the processed content is returned to the content variable using the asynchronous remark function (remark library)
-- at the very end, the processed content is converted into a string and returned along with the rest of the article data (in object)
+- if there is content in a specific file, the processed content is returned to the content variable using the asynchronous remark function (remark library),
+- at the very end, the processed content is converted into a string and returned along with the rest of the article data (in object).
+
+<br/>
 
 To sum up, the logic of the function described above is responsible for downloading and modifying data from the markdown file (article) to a form that can then be used on the frontend.
 
@@ -888,7 +903,7 @@ Now I would like to go on to describe in chronological manner the logic that occ
 - the showInfo state is created, along with the setShowInfo function to set that state,
 - the variable timeoutIndex has been declared,
 - to the time variable was assigned 2000 value,
-- a function was passed to the useState hook (dependent on load state), in which if the load state is true, the overflow property of the body object will be set to hidden and the setTimeout function will be called after a predetermined time (time variable), which sets the showInfo state to true using the setShowInfo function (the setTimeout function was returned to the timeoutIndex variable for reference). If the load state is false, the setShowInfo function will set the showInfo state to false, the clearTimeout function will delete the setTimeout function waiting to be called (if it has not yet been executed) and the overflow property of the body object will be set to auto.
+- a function was passed to the useState hook (dependent on load state), in which if the load state is true, the overflow property of the body object will be set to hidden and the setTimeout function will be called after a predetermined time (time variable), which sets the showInfo state to true using the setShowInfo function (the setTimeout function was returned to the timeoutIndex variable for reference). If the load state is false, the setShowInfo function will set the showInfo state to false, the clearTimeout function will delete the setTimeout function waiting to be called (if it has not yet been executed) and the overflow property of the body object will be set to auto,
 - at the very end, jsx is returned, in which, if the loader state is true then the loader structure will be returned and if the showInfo state is true then the information about the longer loading will be displayed (for better user expeence).
 
 <br/>
