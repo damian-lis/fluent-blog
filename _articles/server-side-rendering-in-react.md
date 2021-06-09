@@ -5,6 +5,7 @@ cover: /images/covers/serverSideRenderingInReact.png
 date: 03-11-2021
 tags:
   - react
+  - SSR
   - webdev
 ---
 

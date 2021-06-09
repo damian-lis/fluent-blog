@@ -6,8 +6,8 @@ date: 02-20-2021
 tags:
   - immer
   - javascript
-  - webdev
   - redux
+  - webdev
 ---
 
 Reducers - a core element of Redux's philosophy that tightly grabs mutations of a given state in one place. In theory, the pure nature of reducers should lead to great scalability, readability, and make us all fortunate children of Redux god. But even the brightest idea can be dimmed if thrown on the one most pediculous soil...

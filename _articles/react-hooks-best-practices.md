@@ -5,8 +5,8 @@ cover: /images/covers/reactHooks.png
 date: 03-12-2021
 tags:
   - react
-  - webdev
   - hooks
+  - webdev
 ---
 
 <span class="md-detail">This React Hooks tutorial was last updated in January 2021 to include more React Hooks best practices and examples.</span>

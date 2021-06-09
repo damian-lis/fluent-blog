@@ -6,8 +6,8 @@ date: 02-10-2021
 tags:
   - react
   - javascript
-  - webdev
   - redux
+  - webdev
 ---
 
 React revolutionized front end development as most people knew it when it was first released. This new approach to writing code triggered incredible innovation in how to handle state changes and UI updates.

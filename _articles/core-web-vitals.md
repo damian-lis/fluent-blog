@@ -4,10 +4,10 @@ description: Google confirms Core Web Vitals are becoming ranking signals for se
 cover: /images/covers/coreWebVitals.png
 date: 03-11-2021
 tags:
-  - webdev
-  - javascript
   - html
   - css
+  - javascript
+  - webdev
 ---
 
 ## 1. Google: Core Web Vitals Becoming Ranking Signals in May 2021

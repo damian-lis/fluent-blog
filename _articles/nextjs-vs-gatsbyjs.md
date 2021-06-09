@@ -5,9 +5,9 @@ cover: /images/covers/nextVsGatsby.png
 date: 03-12-2021
 tags:
   - react
-  - webdev
   - next
   - gatsby
+  - webdev
 ---
 
 ## Introduction
