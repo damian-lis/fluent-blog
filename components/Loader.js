@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import LoadingContext from 'contexts/loading';
 
-export default () => {
+export default function Loader() {
   const { load } = useContext(LoadingContext.store);
   const [showInfo, setShowInfo] = useState(false);
   let timeoutIndex;
@@ -33,4 +33,4 @@ export default () => {
       </div>
     )
   );
-};
+}

@@ -3,7 +3,7 @@ import LoadingContext from 'contexts/loading';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default ({ article }) => {
+export default function ArticleCard({ article }) {
   const { setLoad } = useContext(LoadingContext.store);
 
   let localDate = new Date(article.createdAt).toLocaleDateString();
@@ -56,4 +56,4 @@ export default ({ article }) => {
       </Link>
     </li>
   );
-};
+}

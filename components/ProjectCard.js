@@ -1,4 +1,4 @@
-export default ({ project, TagComponent }) => {
+export default function ProjectCard({ project, TagComponent }) {
   let localDate = new Date(project.createdAt).toLocaleDateString();
 
   if (localDate.substr(0, 2).includes('.')) {
@@ -44,4 +44,4 @@ export default ({ project, TagComponent }) => {
       </div>
     </li>
   );
-};
+}

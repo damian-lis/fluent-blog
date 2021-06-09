@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default () => {
+export default function BtnTopScroll() {
   const [isShow, setIsShow] = useState(false);
   const [isFooter, setIsFooter] = useState(false);
 
@@ -34,4 +34,4 @@ export default () => {
       </div>
     </div>
   );
-};
+}

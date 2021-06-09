@@ -1,6 +1,6 @@
 import { Navbar, Footer, Loader, BtnTopScroll } from 'components';
 
-export default ({ children }) => {
+export default function Layout({ children }) {
   return (
     <>
       <Loader />
@@ -13,4 +13,4 @@ export default ({ children }) => {
       <BtnTopScroll />
     </>
   );
-};
+}
