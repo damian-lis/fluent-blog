@@ -5,6 +5,13 @@ import Link from 'next/link';
 
 export default ({ article }) => {
   const { setLoad } = useContext(LoadingContext.store);
+
+  let localDate = new Date(article.createdAt).toLocaleDateString();
+
+  if (localDate.substr(0, 2).includes('.')) {
+    localDate = '0' + localDate;
+  }
+
   return (
     <li className="transition-all duration-150 flex justify-center w-full px-4 py-6 md:w-1/2 lg:w-1/3">
       <div className="max-w-md flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
@@ -17,10 +24,16 @@ export default ({ article }) => {
             className="object-fill w-full rounded-lg rounded-b-none md:h-56"
           />
         </div>
-        <div className="flex items-center justify-between px-4 py-2 overflow-hidden">
-          <span className="text-xs font-medium text-blue-600 uppercase">{article.tags[0]}</span>
+        <div className=" px-4 py-2 overflow-hidden">
+          {article.tags.map(
+            (tag, index) =>
+              index < 3 && (
+                <span className="text-xs mr-2 font-medium text-blue-600 uppercase">{tag}</span>
+              )
+          )}
+
           <div className="text-xs font-medium text-gray-500 flex flex-row items-center">
-            {new Date(article.createdAt).toLocaleDateString()}
+            {localDate}
           </div>
         </div>
         <hr className="border-gray-300" />
