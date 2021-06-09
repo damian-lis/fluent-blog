@@ -1,6 +1,6 @@
 ---
 title: Is Redux really Dead?
-description: Context, hooks, and why it solved much of what Redux did
+description: Context, hooks, and why it solved much of what Redux did.
 cover: /images/covers/isReduxDead.jpeg
 date: 02-10-2021
 tags:
@@ -17,6 +17,8 @@ This revolution had its downsides, too. One of them was a culture of over-engine
 Redux has become a hallmark of many React applications created in the last couple of years. The allure of having a single state object, available everywhere in your application sure sounds nice. But has its time passed? Has React evolved to a point where these kinds of state management tools add more complexity than they solve?
 
 This article aims to give you a deeper understanding of which situations warrants state management tools like Redux. We’ll discuss the reasons behind the rise of Redux, and what has changed in the last couple of years - both in React and in Redux. Finally, we’ll look into what might be coming in the future.
+
+<br/>
 
 ## Redux - and why people started using it
 
@@ -48,4 +50,4 @@ module.exports = {
 };
 ```
 
-Article copied from **[here](https://dev.to/asayerio_techblog/is-redux-dead-1d2a)**
+Full article is <a href="https://dev.to/asayerio_techblog/is-redux-dead-1d2a" target="\_blank" rel="noopener noreferrer">here</a>.

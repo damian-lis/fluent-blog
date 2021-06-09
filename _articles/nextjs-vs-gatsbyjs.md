@@ -25,25 +25,33 @@ React’s breadth has grown outside the web, and its depth within it has grown a
 
 Now the whole community and projects around React are fondly known as the React ecosystem. Today, we are going to examine two of the most famous React frameworks: Gatsby and Next.js.
 
+<br/>
+
 ## What is GatsbyJS?
 
 **Gatsby** is a modern web framework **built on top of React and GraphQL**. The main focus of the framework is built-in performance: it creates blazing-fast websites by default. It creates a static build to make the website faster. That’s one of the reasons why Gatsby is often overlooked as yet another static site generator.
 
 Even though Gatsby is built on top of React, it has an ecosystem of its own that includes plugins, themes, and starters. It is extendable by default. It is built as a static site in build time and hosted as simple HTML pages.
 
-Gatsby’s **[quick–start tutorials](https://www.gatsbyjs.com/docs/tutorial/)** are an excellent place to get started.
+Gatsby’s <a href="https://www.gatsbyjs.com/docs/tutorial/" target="\_blank" rel="noopener noreferrer">quick–start tutorials</a> are an excellent place to get started.
+
+<br/>
 
 ## What is Next.js?
 
 **Next.js** is another popular React framework. The idea of Next.js is to create server-rendered React applications with little to no configuration. Performance isn’t the main draw for Next.js; rather, it is **improved developer experience** and reduced hassle to create full-fledged, SSR-friendly web applications.
 
-Next.js also supports static builds, but it’s not the primary focus. We will discuss the limitations when we go through the use cases. The **[Next.js Getting Started guide](https://nextjs.org/learn/basics/create-nextjs-app)** is an excellent place to start learning about Next.js.
+Next.js also supports static builds, but it’s not the primary focus. We will discuss the limitations when we go through the use cases. The <a href="https://nextjs.org/learn/basics/create-nextjs-app" target="\_blank" rel="noopener noreferrer">Next.js Getting Started guide</a> is an excellent place to start learning about Next.js.
+
+<br/>
 
 ## Understanding SSR and static sites
 
 Applications rendered on the server side are SEO-friendly by default. Server-side rendering (SSR) is faster because it doesn’t wait for the browser to load the JS to show content. SSR requires proper servers to send the response every time. In our case, Next.js is served using Node-based servers.
 
 On the other hand, static sites are faster because they serve the static HTML and CSS from the server without any processing in runtime. Static sites will be cached through a CDN and served faster than dynamic websites. Static sites are SEO-friendly, too, if the site has only static content.
+
+<br/>
 
 ## Next.js vs. GatsbyJS: similarities
 
@@ -57,14 +65,19 @@ They perform smart page loading by prefetching the links for next pages asynchro
 
 Whether Gatsby or Next.js creates the faster web application depends on the use case. Instead of going through theoretical pros and cons, which you can find easily around the web, we’ll take a different approach and determine which framework will be the better choice based on the problem at hand.
 
+<br/>
+
 ## Use cases
 
 I believe in horses for the courses. So we will choose the best option between Gatsby and Next.js for these use cases:
 
 - Simple static website
-- Large multi-user sites like **[dev.to](https://dev.to/)** (published in real time)
+- Large multi-user sites like <a href="https://dev.to/" target="\_blank" rel="noopener noreferrer">dev.to</a> (published in real time)
+
 - Client-side rendered applications (SPA/MPA)
 - Hybrid web apps (SPA and SSR in a single application)
+
+<br/>
 
 ## Next.js vs. GatsbyJS for simple static websites
 
@@ -99,6 +112,8 @@ Gatsby is our winner to build faster, performant static websites. The developer 
 - Gatsby separates the data and allows non-developers to edit content
 - Gatsby also shortens the development lifecycle with a wide range of Gatsby plugins, starters, and themes
 
+<br/>
+
 ## Next.js vs. GatsbyJS for large, multi-user websites
 
 **Requirements:**
@@ -118,7 +133,7 @@ Since the content is created by a large number of users and gets incremented whe
 
 For Gatsby, the major disadvantage for creating such websites is its building process and the time taken for the building process. Users often want to see their content in real time, not after a few minutes through a build process. And if the number of users is high, it might not be a few minutes; it could take up to a few hours.
 
-Gatsby is working on optimizing this and **[already released initial support for faster builds](https://www.gatsbyjs.com/blog/2019-11-14-announcing-gatsby-cloud/)** in their commercial solution called Gatsby Cloud. But still — it may take a while until we get the complete, real-time incremental build feature, and we also don’t know whether Gatsby will choose to release that feature as part of their open-source offering anytime soon.
+Gatsby is working on optimizing this and <a href="https://www.gatsbyjs.com/blog/2019-11-14-announcing-gatsby-cloud/" target="\_blank" rel="noopener noreferrer">already released initial support for faster builds</a> in their commercial solution called Gatsby Cloud. But still — it may take a while until we get the complete, real-time incremental build feature, and we also don’t know whether Gatsby will choose to release that feature as part of their open-source offering anytime soon.
 
 **Verdict: Next.js**
 
@@ -129,6 +144,8 @@ For websites with multiple users accessing and editing the content, it’s bette
 - Even the static blog content needs to be published in real time and accessible for editing by the user
 
 In such cases, build time-based frameworks won’t work well.
+
+<br/>
 
 ## Next.js vs. GatsbyJS for client-side rendered applications (SPA/MPA)
 
@@ -147,6 +164,8 @@ In such cases, build time-based frameworks won’t work well.
 
 Here, SEO isn’t the key, but speed and fast response times for the user are key. For such websites, there is no clear winner between Gatsby and Next Js. We will see in the details below how both play out for developing such web applications.
 
+<br/>
+
 ## Gatsby for dynamic web applications
 
 So far, we’ve said Gatsby builds at build time and serves the static site. This is really only half-true. Why?
@@ -162,6 +181,8 @@ Gatsby’s multi-page nature easily helps you isolate and send those users to re
 Prefetching of next links and assets is easy in Gatsby and makes the page load faster. Such a high level optimization is quite difficult to achieve in CRA on your own.
 
 So, all in all, building a client-side rendered application is completely possible using Gatsby. So don’t ever think of Gatsby just as a static site generator — it does more than that. It’s a complete framework for building modern web applications.
+
+<br/>
 
 ## Next.js for dynamic web applications
 
@@ -179,9 +200,11 @@ This way, we can get the benefit of both the worlds in Next.js (i.e., both SSR a
 
 So for dynamic web applications, both Gatsby and Next.js are equally capable. Next.js edges a bit in the first painting of UI.
 
-<span class="md-detail">My firsthand experience with Gatsby was awesome. In my day job, we have used Gatsby for our product, which is quite complex and which has three different sets of users. So far, we are very happy, and the developer experience for building the platform with an eight-member dev team was absolutely awesome. Their documentation is one excellent source to gain web development knowledge.
+<span class="md-detail">"My firsthand experience with Gatsby was awesome. In my day job, we have used Gatsby for our product, which is quite complex and which has three different sets of users. So far, we are very happy, and the developer experience for building the platform with an eight-member dev team was absolutely awesome. Their documentation is one excellent source to gain web development knowledge."
 
 We have also used Next.js for simple dynamic websites (not the same scale as the Gatsby application). It was equally good but has its own learning curve for doing advanced stuff in its configuration. Luckily, their contributors and docs are pretty friendly.</span>
+
+<br/>
 
 ## Next.js vs. GatsbyJS for hybrid web apps
 
@@ -205,10 +228,12 @@ Now let’s check out a different use case for a hybrid web app and website in a
 
 You have a company website and a web app product. You want to build it with single codebase, not as two independent sites. In such situations, it’s much easier to handle both with Next.js and Gatsby, too. We can render the static pages for the company website and CSR for the web app product. The same way, we can utilize SSR for the website and a combination of SSR plus CSR for the web app.
 
+<br/>
+
 ## Conclusion
 
 Both Gatsby and Next.js are awesome frameworks. I would say both are winners, but it depends on your project requirements; choose the one that best suits the need. The biggest winners here are the developers. Their experience using both frameworks is absolute bliss.
 
 I’d encourage you to check their docs for more information .Hope you enjoying reading the article, let me know what you think of both frameworks and your firsthand experience with them in the comment box. 🤗
 
-Article part copied from **[here](https://blog.logrocket.com/next-js-vs-gatsbyjs-a-developers-perspective/)**.
+Full article is <a href="https://blog.logrocket.com/next-js-vs-gatsbyjs-a-developers-perspective/" target="\_blank" rel="noopener noreferrer">here</a>.

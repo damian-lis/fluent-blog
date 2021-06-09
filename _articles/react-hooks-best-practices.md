@@ -1,5 +1,5 @@
 ---
-title: React hooks - Best practices.
+title: React hooks - best practices.
 description: In this tutorial, we’ll outline some React Hooks best practices and highlight some use cases with examples, from simple to advanced scenarios.
 cover: /images/covers/reactHooks.png
 date: 03-12-2021
@@ -15,9 +15,11 @@ React Hooks have a very simple API, but given its massive community and variety 
 
 In this tutorial, we’ll outline some React Hooks best practices and highlight some use cases with examples, from simple to advanced scenarios. To help demonstrate how to solve common React Hooks questions, I built an **accompanying web app** for live interaction with the examples herein.
 
+<br/>
+
 ## React Hooks cheat sheet: Best practices and examples
 
-This React Hooks cheat sheet includes a lot of code snippets and assumes some Hooks fluency. If you’re completely new to Hooks, you may want to start with our **[React Hooks API reference guide](https://blog.logrocket.com/react-reference-guide-hooks-api/)**.
+This React Hooks cheat sheet includes a lot of code snippets and assumes some Hooks fluency. If you’re completely new to Hooks, you may want to start with our <a href="https://blog.logrocket.com/react-reference-guide-hooks-api/" target="\_blank" rel="noopener noreferrer">React Hooks API reference guide</a>.
 
 Included in this React Hooks cheat sheet are best practices related to the following Hooks:
 
@@ -30,15 +32,17 @@ Included in this React Hooks cheat sheet are best practices related to the follo
 - useMemo
 - useRef
 
+<br/>
+
 ### UseState
 
 useState lets you use local state within a function component. You pass the initial state to this function and it returns a variable with the current state value (not necessarily the initial state) and another function to update this value.
 
 #### Declare state variable
 
-Declaring a state variable is as simple as calling <span class="md-code">useState</span> with some initial state value, like so: <span class="md-code">useState(initialStateValue)</span>.
+Declaring a state variable is as simple as calling <span class="md-snippet">useState</span> with some initial state value, like so: <span class="md-snippet">useState(initialStateValue)</span>.
 
-```js
+```jsx
 const DeclareStateVar = () => {
   const [count] = useState(100);
   return <div> State variable is {count}</div>;
@@ -47,15 +51,19 @@ const DeclareStateVar = () => {
 
 #### Update state variable
 
-Updating a state variable is as simple as invoking the updater function returned by the <span class="md-code">useState</span> invocation: <span class="md-code">const [stateValue, updaterFn] = useState(initialStateValue);</span>.
+Updating a state variable is as simple as invoking the updater function returned by the <span class="md-snippet">useState</span> invocation:
 
-<img class="md-image" src="/images/articles/reactHooks/updateStateVariable.gif">
+```jsx
+const [stateValue, updaterFn] = useState(initialStateValue);
+```
+
+![](/images/articles/reactHooks/updateStateVariable.gif)
 
 <span class="md-detail">Note how the age state variable is being updated.</span>
 
 Here’s the code responsible for the screencast above:
 
-```js
+```jsx
 const UpdateStateVar = () => {
   const [age, setAge] = useState(19);
   const handleClick = () => setAge(age + 1);
@@ -71,19 +79,19 @@ const UpdateStateVar = () => {
 };
 ```
 
-#### Why does the React <span class="md-code">useState</span> Hook not update immediately?
+#### Why does the React <span class="md-snippet">useState</span> Hook not update immediately?
 
-React <span class="md-code">useState</span> and <span class="md-code">setState</span> don’t make changes directly to the state object; they create queues to optimize performance, which is why the changes don’t update immediately.
+React <span class="md-snippet">useState</span> and <span class="md-snippet">setState</span> don’t make changes directly to the state object; they create queues to optimize performance, which is why the changes don’t update immediately.
 
 #### React Hooks and multiple state variables
 
 Multiple state variables may be used and updated from within a functional component, as shown below:
 
-<img class="md-image" src="/images/articles/reactHooks/multipleStateVariables.gif">
+![](/images/articles/reactHooks/multipleStateVariables.gif)
 
 Here’s the code responsible for the screencast above:
 
-```js
+```jsx
 const MultipleStateVars = () => {
   const [age, setAge] = useState(19);
   const [siblingsNum, setSiblingsNum] = useState(10);
@@ -107,11 +115,11 @@ const MultipleStateVars = () => {
 
 #### Use object state variable
 
-As opposed to strings and numbers, you could also use an object as the initial value passed to <span class="md-code">useState</span>.
+As opposed to strings and numbers, you could also use an object as the initial value passed to <span class="md-snippet">useState</span>.
 
-Note that you have to pass the entire object to the <span class="md-code">useState</span> updater function because the object is replaced, not merged.
+Note that you have to pass the entire object to the <span class="md-snippet">useState</span> updater function because the object is replaced, not merged.
 
-```js
+```jsx
 // 🐢 setState (object merge) vs useState (object replace)
 // assume initial state is {name: "Ohans"}
 
@@ -124,12 +132,15 @@ useStateUpdater({ age: 'unknown' });
 // {age: "unknown"} - initial object is replaced
 ```
 
-<img class="md-image" src="/images/articles/reactHooks/objectStateVariable.gif">
+<br/>
+
+![](/images/articles/reactHooks/objectStateVariable.gif)
+
 <span class="md-detail">Multiple state objects updated via a state object variable.</span>
 
 Here’s the code for the screencast above:
 
-```js
+```jsx
 const StateObject = () => {
   const [state, setState] = useState({ age: 19, siblingsNum: 4 });
   const handleClick = (val) =>
@@ -157,7 +168,7 @@ const StateObject = () => {
 
 As opposed to just passing an initial state value, state could also be initialized from a function, as shown below:
 
-```js
+```jsx
 const StateFromFn = () => {
   const [token] = useState(() => {
     let token = window.localStorage.getItem('my-token');
@@ -168,11 +179,13 @@ const StateFromFn = () => {
 };
 ```
 
+<br/>
+
 ### Functional setState
 
-The updater function returned from invoking <span class="md-code">useState</span> can also take a function similar to the good ol’ <span class="md-code">setState</span>:
+The updater function returned from invoking <span class="md-snippet">useState</span> can also take a function similar to the good ol’ <span class="md-snippet">setState</span>:
 
-```js
+```jsx
 const [value, updateValue] = useState(0);
 // both forms of invoking "updateValue" below are valid 👇
 updateValue(1);
@@ -181,13 +194,13 @@ updateValue((previousValue) => previousValue + 1);
 
 This is ideal when the state update depends on some previous value of state.
 
- <img class="md-image" src="/images/articles/reactHooks/setStateUpdates.gif">
+![](/images/articles/reactHooks/setStateUpdates.gif)
 
 <span class="md-detail">A counter with functional setState updates.</span>
 
 Here’s the code for the screencast above:
 
-```js
+```jsx
 const CounterFnSetState = () => {
   const [count, setCount] = useState(0);
   return (
@@ -201,8 +214,4 @@ const CounterFnSetState = () => {
 };
 ```
 
-Here’s a **[live, editable useState cheat sheet](https://react-hooks-cheatsheet.com/usestate)** if you want to dive deeper on your own.
-
-Article part copied from **[here](https://blog.logrocket.com/react-hooks-cheat-sheet-unlock-solutions-to-common-problems-af4caf699e70/#usestate)**.
-
-If you want to know the rest of react hooks, check out **[this article](https://blog.logrocket.com/react-hooks-cheat-sheet-unlock-solutions-to-common-problems-af4caf699e70/#usestate)**.
+Full article is <a href="https://blog.logrocket.com/react-hooks-cheat-sheet-unlock-solutions-to-common-problems-af4caf699e70/#usestate" target="\_blank" rel="noopener noreferrer">here</a>.

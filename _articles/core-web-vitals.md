@@ -14,7 +14,7 @@ tags:
 
 Google is announcing Core Web Vitals will become ranking signals in May 2021 in an update that will also combine existing UX-related signals.
 
-<img class="md-image" src="/images/articles/corewebvitals/composition.jpg">
+![](/images/articles/corewebvitals/composition.jpg)
 
 The ‘page experience’ signal combines Core Web Vitals with the following signals:
 
@@ -31,15 +31,13 @@ Specifically, these are defined as the Core Web Vitals:
 - **First Input Delay**: The time it takes for a page to become interactive. An ideal measurement is less than **100 ms**.
 - **Cumulative Layout Shift**: The amount of unexpected layout shift of visual page content. An ideal measurement is **less than 0.1**.
 
-<img class="md-image" src="/images/articles/corewebvitals/chart.webp">
+![](/images/articles/corewebvitals/chart.webp)
 
 <div class="md-detail">“These signals measure how users perceive the experience of interacting with a web page and contribute to our ongoing work to ensure people get the most helpful and enjoyable experiences from the web.”</div>
 
 Core Web Vitals are subject to change from year to year as user expectations of web pages change.
 
-&nbsp;
-&nbsp;
-&nbsp;
+<br/>
 
 ## 2. New Labels in Search Results
 
@@ -61,9 +59,7 @@ For what it’s worth, Google recommends AMP as an easy and cost-effective way t
 
 “The majority of the AMP pages achieve great page experiences,” Google says.
 
-&nbsp;
-&nbsp;
-&nbsp;
+<br/>
 
 ## 3. Non-AMP Content in Top Stories Carousel
 
@@ -75,4 +71,4 @@ Any page that meets the Google News content policies will be eligible to appear 
 
 Google notes that it will continue to support AMP content in Google Search the same way it currently does.
 
-Article copied from **[here](https://www.searchenginejournal.com/google-core-web-vitals-ranking-signals/387142/#close)**
+Full article is <a href="https://www.searchenginejournal.com/google-core-web-vitals-ranking-signals/387142/#close" target="\_blank" rel="noopener noreferrer">here</a>.
