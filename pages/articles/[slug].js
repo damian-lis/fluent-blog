@@ -26,6 +26,12 @@ export const getStaticProps = async (req) => {
 export default function Article({ article }) {
   const { setLoad } = useContext(LoadingContext.store);
 
+  let localDate = new Date(article.createdAt).toLocaleDateString();
+
+  if (localDate.substr(0, 2).includes('.')) {
+    localDate = '0' + localDate;
+  }
+
   useEffect(() => {
     setLoad(false);
   }, []);
@@ -48,7 +54,7 @@ export default function Article({ article }) {
         </div>
 
         <h1 className="text-center text-4xl mb-3 mt-10 ">{article.title}</h1>
-        <span className="text-center  text-gray-700 italic">{article.date}</span>
+        <span className="text-center  text-gray-700 italic">{localDate}</span>
         <div
           className="max-w-3xl w-full mx-auto articleBody text-justify "
           dangerouslySetInnerHTML={{ __html: article.content }}
