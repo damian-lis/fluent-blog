@@ -23,10 +23,10 @@ export default () => {
   return (
     load && (
       <div className=" flex flex-col justify-center items-center h-screen w-screen bg-gray-900 bg-opacity-60 fixed z-20 overflow-hidden">
-        <div className="object-center loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-32 w-32"></div>
-        <p className="mt-4 text-lg leading-relaxed text-white">Wczytuję artykuł...</p>
+        <div className="object-center loader rounded-full border-8 h-20 w-20 sm:h-28 sm:w-28 "></div>
+        <p className="mt-4 md:text-lg leading-relaxed text-white">Wczytuję artykuł...</p>
         {showInfo && (
-          <p className="px-5 text-center mt-1 text-lg leading-relaxed text-white">
+          <p className="px-5 text-center mt-1 md:text-lg leading-relaxed text-white">
             Strona ładuje się dłużej niż zwykle... Prosimy o cierpliwość!
           </p>
         )}
