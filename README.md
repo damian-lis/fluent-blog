@@ -113,11 +113,10 @@ The project uses several solutions that allow for easier application development
 
 - Eslint, which allows You to catch bugs during development. Its configuration is below:
 
-```
+```js
 //.eslintignore file:
 
-node_modules
-.next
+node_modules.next;
 
 //.eslintrc.js file:
 
@@ -166,7 +165,7 @@ module.exports = {
 
 - Prettier, which keeps the code clean. Its configuration is below:
 
-```
+```json
 //.prettierignore file:
 
 node_modules
@@ -187,7 +186,7 @@ node_modules
 
 - Absolute import, that make the code a lot cleaner, more readable and manageable. Its configuration is below:
 
-```
+```json
 //jsconfig.json file:
 
 {
@@ -207,7 +206,7 @@ The project uses a framework called TailwindCSS which is a utility-first CSS fra
 
 Below is an example of using this framework for an div html element:
 
-```
+```js
 //components/ProjectCard.js file:
 
 <div className="relative border-yellow-900"></div>
@@ -222,7 +221,7 @@ In the example above, the following styles have been added to the div element:
 
 Below is the Tailwind CSS configuration along with the configuration of the support tools:
 
-```
+```js
 //tailwind.config.js file:
 
 module.exports = {
@@ -240,7 +239,6 @@ module.exports = {
   },
   plugins: []
 };
-
 
 //postcss.config.js file:
 
@@ -340,18 +338,21 @@ At the very beginning, I would like to focus on the possibility of dynamic addin
 
 An example of one of the markdown files with mentioned data is shown below:
 
-```
+```md
 <!-- _projects/portfolio-website.md file: -->
 
 ---
+
 title: Portfolio website
 description: A project that contains information about me, my skills and the projects that I have done. Also You can here send an e-mail to me (support by Emails Handler app).
-date: 12-02-2021
+date: 02-16-2021
 link: https://github.com/damian-lis/Portfolio-Website
 tags:
-  - HTML
-  - CSS
-  - JavaScript (OOP)
+
+- HTML
+- CSS
+- JavaScript (OOP)
+
 ---
 ```
 
@@ -361,7 +362,7 @@ As we can see above, we have different attributes and their values (tittle, desc
 
 To display mentioned data from markdown files on the page, we need logic that will parse this data for us. Below is example of the function (backend logic) that make it possible:
 
-```
+```js
 //lib/markdownParser.js file:
 
 export const getList = (path) => {
@@ -397,7 +398,7 @@ To sum up, the function discussed above allows to download and modify the specif
 
 In order to be able to introduce some modifications (e.g. sorting) to the returned data by getList function while keeping the code clean, the getAllProjects function was introduced, the implementation of which is presented below:
 
-```
+```js
 //services/projects.js file:
 
 import { getList } from 'lib/markdownParser';
@@ -415,13 +416,13 @@ As we can see above, the getAllProjects function returns the data (projoects) th
 
 Having the logic responsible for parsing the data, below is the logic thanks to which the parsed data can be read on the frontend side:
 
-```
+```jsx
 //pages/projects.js
 
 import Layout from 'containers/Layout';
 import Head from 'next/head';
 import { getAllProjects } from 'services/projects';
-import { ProjectCard, Tag } from 'components';
+import { ProjectCard, ProjectTag } from 'components';
 
 export const getStaticProps = () => {
   const projects = getAllProjects();
@@ -442,7 +443,7 @@ export default function Projects({ projects }) {
           <h1 className="text-center text-3xl mb-10 mt-10">MY PROJECTS</h1>
           <ul className="mb-8">
             {projects.map((project) => (
-              <ProjectCard key={project.title} project={project} TagComponent={Tag} />
+              <ProjectCard key={project.title} project={project} TagComponent={ProjectTag} />
             ))}
           </ul>
         </div>
@@ -474,30 +475,35 @@ In this subsection, I'd like to focus on extending the functionality that was di
 
 First, an example markdown file containing information about the article is presented below:
 
-```
+```md
 <!-- _articles/immer-vs-ramda.md file: -->
 
 ---
+
 title: Immer vs Ramda -
-description: Two approaches towards writing Redux reducers
+description: Two approaches towards writing Redux reducers.
 cover: /images/covers/immerVsRamda.png
 date: 02-20-2021
 tags:
-  - immer
-  - javascript
-  - webdev
-  - redux
+
+- immer
+- javascript
+- redux
+- webdev
+
 ---
 
 Reducers - a core element of Redux's philosophy that tightly grabs mutations of a given state in one place. In theory, the pure nature of reducers should lead to great scalability, readability, and make us all fortunate children of Redux god. But even the brightest idea can be dimmed if thrown on the one most pediculous soil...
 
-Yes. I speak about JavaScript. Writing complex pure functions in vanilla JavaScript is harsh. Avoiding mutations is extraordinarily hard. Matching against actions? There are no Variants/Enums in JS, you have to use strings instead. And you land with a poor switch statement taken straight from the hell. Regardless, Redux is the most popular state manager for React applications
+Yes. I speak about JavaScript. Writing complex pure functions in vanilla JavaScript is harsh. Avoiding mutations is extraordinarily hard. Matching against actions? There are no Variants/Enums in JS, you have to use strings instead. And you land with a poor switch statement taken straight from the hell. Regardless, Redux is the most popular state manager for React applications.
+
+<br/>
 
 ## The path to purity
 
 Consider the two ways to make your life easier, the first one will be the Immer - Immer is a package that lets you deliver the next state by "mutating" the draft of the previous state:
 
-Article copied from **[here](www.dev.to/fkrasnowski/immer-vs-ramda-two-approaches-towards-writing-redux-reducers-3fe0)**
+Full article is <a href="https://dev.to/fkrasnowski/immer-vs-ramda-two-approaches-towards-writing-redux-reducers-3fe0" target="\_blank" rel="noopener noreferrer">here</a>.
 ```
 
 In the example above, we see a dataset at the beginning that looks very similar to the one presented at the beginning of the previous subsection for projects. In the second part of the example, we can see the content of the article, which requires a different functionality to be dynamic displayed on the website (this process will be described later).
@@ -506,7 +512,7 @@ In the example above, we see a dataset at the beginning that looks very similar 
 
 To create teasers based on a dataset (the first part of the example discussed above), we will use the logic that was already described in the previous subsection. An example of its implementation is shown below:
 
-```
+```jsx
 //pages/index.js file:
 
 import Layout from 'containers/Layout';
@@ -558,7 +564,7 @@ However, before I go to the above-mentioned file, below I would like to present 
 
 Below is the logic that is responsible for parsing a specific article content:
 
-```
+```js
 //lib/markdownParser.js file:
 
 export const getFileBySlug = async (path, slug) => {
@@ -600,7 +606,7 @@ To sum up, the logic of the function described above is responsible for download
 
 Below are the support functions (which use the previously discussed functions) that will be used in the dynamic creation of an article on the website (as in the case of the dynamic display of project data that I discussed earlier):
 
-```
+```js
 //services/articles.js file:
 
 import { getList, getFileBySlug } from 'lib/markdownParser';
@@ -626,7 +632,7 @@ With the logic responsible for returning the processed data and the content of t
 
 Below is an implementation of this solution:
 
-```
+```jsx
 //pages/articles/[slug].js file:
 
 import { useContext, useEffect } from 'react';
@@ -657,6 +663,12 @@ export const getStaticProps = async (req) => {
 export default function Article({ article }) {
   const { setLoad } = useContext(LoadingContext.store);
 
+  let localDate = new Date(article.createdAt).toLocaleDateString();
+
+  if (localDate.substr(0, 2).includes('.')) {
+    localDate = '0' + localDate;
+  }
+
   useEffect(() => {
     setLoad(false);
   }, []);
@@ -679,7 +691,7 @@ export default function Article({ article }) {
         </div>
 
         <h1 className="text-center text-4xl mb-3 mt-10 ">{article.title}</h1>
-        <span className="text-center  text-gray-700 italic">{article.date}</span>
+        <span className="text-center  text-gray-700 italic">{localDate}</span>
         <div
           className="max-w-3xl w-full mx-auto articleBody text-justify "
           dangerouslySetInnerHTML={{ __html: article.content }}
@@ -720,12 +732,12 @@ Below is an visual example of this solution:
 
 For the above process is responsible component named BtnTopScroll, the implementation of which is below:
 
-```
+```jsx
 //components/BtnTopScroll.js file:
 
 import { useEffect, useState } from 'react';
 
-export default () => {
+export default function BtnTopScroll() {
   const [isShow, setIsShow] = useState(false);
   const [isFooter, setIsFooter] = useState(false);
 
@@ -759,7 +771,7 @@ export default () => {
       </div>
     </div>
   );
-};
+}
 ```
 
 As we can see the above mentioned function component has quite extensive logic, which I explain chronologically below:
@@ -775,12 +787,12 @@ As we can see the above mentioned function component has quite extensive logic, 
 
 Below is an example of the use of this component in the so-called page layout:
 
-```
+```jsx
 //containers/Layout.js file:
 
 import { Navbar, Footer, Loader, BtnTopScroll } from 'components';
 
-export default ({ children }) => {
+export default function Layout({ children }) {
   return (
     <>
       <Loader />
@@ -793,7 +805,7 @@ export default ({ children }) => {
       <BtnTopScroll />
     </>
   );
-};
+}
 ```
 
 As we can see in the example above, it is a component that appears alongside other major components such as Navbar and Footer, which are available on every page.
@@ -814,7 +826,7 @@ Below is a visual example of this solution:
 
 For the above process is responsible component named Loader, the implementation of which is below (along with the content of the associated file):
 
-```
+```jsx
 //contexts/loading.js file:
 
 import { createContext, useState } from 'react';
@@ -843,13 +855,12 @@ const LoadingContext = {
 
 export default LoadingContext;
 
-
 //components/Loader.js file
 
 import { useContext, useEffect, useState } from 'react';
 import LoadingContext from 'contexts/loading';
 
-export default () => {
+export default function Loader() {
   const { load } = useContext(LoadingContext.store);
   const [showInfo, setShowInfo] = useState(false);
   let timeoutIndex;
@@ -881,7 +892,7 @@ export default () => {
       </div>
     )
   );
-};
+}
 ```
 
 As we can see above, in addition to the implementation of the Loader component, the content of the contexts/loading.js file were presented, which is responsible for an easy way of saving and sharing the saved data regarding the Loader component.
@@ -910,10 +921,12 @@ Now I would like to go on to describe in chronological manner the logic that occ
 
 The loader component is placed in the Layout structure as shown in the example below:
 
-```
+```jsx
+//containers/Layout.js file:
+
 import { Navbar, Footer, Loader, BtnTopScroll } from 'components';
 
-export default ({ children }) => {
+export default function Layout({ children }) {
   return (
     <>
       <Loader />
@@ -926,7 +939,7 @@ export default ({ children }) => {
       <BtnTopScroll />
     </>
   );
-};
+}
 ```
 
 As we can see above, the Loader component, as in the case of BtnTopScroll component, is placed next to the main Navbar and Footer components.
@@ -935,20 +948,21 @@ As we can see above, the Loader component, as in the case of BtnTopScroll compon
 
 It should be mentioned that the change of state that activates the loader on the page (mentioned earlier load state) is influenced by the ArticleCard component, an excerpt of which is presented below:
 
-```
-export default ({ article }) => {
+```jsx
+//components/ArticleCard.js file:
+
+export default function ArticleCard({ article }) {
   const { setLoad } = useContext(LoadingContext.store);
+
+  //more code...
+
   return (
-      //more code...
-
-    <Link href={`/articles/${article.slug}`}>
-      <a onClick={() => setLoad(true)} className="hover:underline">
-        <h2 className="text-1xl font-bold tracking-normal text-gray-800">{article.title}</h2>
-     </a>
-    </Link>
-
-       //more code...
-  )
+    <li className="flex justify-center w-full px-4 py-6 md:w-1/2 lg:w-1/3">
+      <Link href={`/articles/${article.slug}`}>
+        <a onClick={() => setLoad(true)}>more code...</a>
+      </Link>
+    </li>
+  );
 }
 ```
 
@@ -958,15 +972,19 @@ As we can see in the example above, on the event onClick of a element, the setLo
 
 It should also be mentioned that the change of state that deactivates the loader on the page is influenced by the Article function component, an excerpt of which is presented below:
 
-```
+```jsx
+//pages/articles/[slug].js file:
+
 export default function Article({ article }) {
   const { setLoad } = useContext(LoadingContext.store);
+
+  //more code...
 
   useEffect(() => {
     setLoad(false);
   }, []);
 
-//more code...
+  //more code...
 }
 ```
 
