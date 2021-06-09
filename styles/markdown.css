@@ -65,3 +65,14 @@
   display: inline-block;
   width: 100%;
 }
+
+@media (max-width: 900px) {
+  .md-detail,
+  .articleBody h2,
+  .articleBody h3,
+  .articleBody h4,
+  .articleBody p,
+  .articleBody ul {
+    text-align: left;
+  }
+}
