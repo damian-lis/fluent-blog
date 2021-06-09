@@ -1,4 +1,10 @@
 export default ({ project, TagComponent }) => {
+  let localDate = new Date(project.createdAt).toLocaleDateString();
+
+  if (localDate.substr(0, 2).includes('.')) {
+    localDate = '0' + localDate;
+  }
+
   return (
     <li
       className="relative flex flex-col min-w-0 break-words max-w-4xl m-auto mb-6 shadow-xl rounded-lg mt-10 p-5 border  border-gray-300"
@@ -10,7 +16,7 @@ export default ({ project, TagComponent }) => {
               <div>
                 <h2 className="text-xl font-medium text-gray-900 mr-2 ">{project.title}</h2>
               </div>
-              <span className="whitespace-nowrap text-sm">{project.date}</span>
+              <span className="whitespace-nowrap text-sm">{localDate}</span>
             </div>
             <div className="mt-2 text-gray-700">
               <p>{project.description}</p>
