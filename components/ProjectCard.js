@@ -21,17 +21,28 @@ export default function ProjectCard({ project, TagComponent }) {
             <div className="mt-2 text-gray-700">
               <p>{project.description}</p>
             </div>
-            {project.link && (
-              <>
+            <div>
+              {project.github && (
                 <a
                   target="blank"
-                  className="text-sm my-5 text-blue-800  inline-block bg-gray-100 py-1 px-2 rounded-md hover:underline"
-                  href={project.link}>
+                  rel="noopener noreferrer nofollow"
+                  className="text-sm mb-3 mt-5  text-blue-800 w-max  block bg-gray-100 py-1 px-2 rounded-md hover:underline"
+                  href={project.github}>
                   {' '}
-                  <i className="fab fa-github "></i> Check repository
+                  <i className="fab fa-github"></i> Check repository
                 </a>
-              </>
-            )}
+              )}
+              {project.website && (
+                <a
+                  target="blank"
+                  rel="noopener noreferrer nofollow"
+                  className="text-sm mb-5 text-blue-800 w-max block bg-gray-100 py-1 px-2 rounded-md hover:underline"
+                  href={project.website}>
+                  {' '}
+                  <i className="fas fa-at"></i> Check website
+                </a>
+              )}
+            </div>
             {TagComponent && (
               <div>
                 {project.tags.map((tag, tagId) => (
