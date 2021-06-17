@@ -1,5 +1,11 @@
 # FluentBlog
 
+The site is dedicated to blogging about the IT industry and it contains various articles, author's description and completed projects for the portfolio.
+
+_To facilitate navigation within the description, each section title links to the corresponding section. However, through the arrow ⬆ in the title of a specific section, you can refer to the closest list of specific sections._
+
+<br/>
+
 ### Desktop version:
 
 ![](public/images/readme/intro.gif)
@@ -16,22 +22,15 @@
 
 <br/>
 
-## Table of Contents
+<h2 id="table-of-contents">Table of contents</h2>
 
-1. [General info](#general-info)
-2. [Technologies](#technologies)
-3. [Setup](#setup)
-4. [Features](#features)
+1. [Technologies](#technologies)
+2. [Setup](#setup)
+3. [Features](#features)
 
    <br/>
 
-<h2 id="general-info">1. General info</h2>
-
-The site is dedicated to blogging about the IT industry and it contains various articles, author's description and completed projects for the portfolio.
-
-<br/>
-
-<h2 id="technologies">2. Technologies</h2>
+<h2 id="technologies">1. Technologies <a href="#table-of-contents">⬆</a></h2>
 
 The following technologies were used in the project:
 
@@ -40,7 +39,7 @@ The following technologies were used in the project:
 
   <br/>
 
-<h2 id="setup">3. Setup</h2>
+<h2 id="setup">2. Setup <a href="#table-of-contents">⬆</a></h2>
 
 First of all, you need to make sure you have [Node.js](https://nodejs.org/en/) installed.
 
@@ -68,7 +67,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 <br/>
 
-<h2 id="features">4. Features</h2>
+<h2 id="features">3. Features <a href="#table-of-contents">⬆</a></h2>
 
 The entire project was created using Next and TailwindCSS technologies due to the speed and ease of development, efficiency and the ability to render the code on the server side, which contributes to better SEO.
 
@@ -76,9 +75,7 @@ The entire project was created using Next and TailwindCSS technologies due to th
 
 The list of the most interesting solutions in this project is presented below:
 
-<br/>
-
-### 4.1. [General](#general) <br/>
+<h3 id="general-main">4.1.<a href="#general"> General</a></h3>
 
 &nbsp; 4.1.1. [Basic configuration](#basic-config)
 
@@ -88,7 +85,7 @@ The list of the most interesting solutions in this project is presented below:
 
 <br/>
 
-### 4.2. [Specific](#specific) <br/>
+<h3 id="specific-main">4.2.<a href="#specific"> Specific</a></h3>
 
 &nbsp; 4.2.1. [ Adding data related to portfolio projects dynamically](#adding-data-dynamically)
 
@@ -101,13 +98,13 @@ The list of the most interesting solutions in this project is presented below:
 <br/>
 <br/>
 
-<h2 id="general">4.1. General</h2>
+<h2 id="general">4.1. General <a href="#general-main">⬆</a></h2>
 
 In this section, I will focus on the general description of the various solutions that have been introduced in the project.
 
 <br/>
 
-<h3 id="basic-config">4.1.1. Basic configuration</h3>
+<h3 id="basic-config">4.1.1. Basic configuration <a href="#general-main">⬆</a></h3>
 
 The project uses several solutions that allow for easier application development. Below is a list of these solutions:
 
@@ -198,7 +195,7 @@ node_modules
 
 <br/>
 
-<h3 id="tailwind-config">4.1.2. TailwindCSS and its configuration</h3>
+<h3 id="tailwind-config">4.1.2. TailwindCSS and its configuration <a href="#general-main">⬆</a></h3>
 
 The project uses a framework called TailwindCSS which is a utility-first CSS framework for rapidly building custom user interfaces (writing styles is done by using special classes defined in the framework).
 
@@ -249,7 +246,7 @@ module.exports = {
 
 <br/>
 
-<h3 id="folders-structure">4.1.3. The structure of folders in the project</h3>
+<h3 id="folders-structure">4.1.3. The structure of folders in the project <a href="#general-main">⬆</a></h3>
 
 The folder structure in the project is as follows (folders with an underline "\_" are associated with generating static pages (data that builds pages)):
 
@@ -322,13 +319,13 @@ The folder structure in the project is as follows (folders with an underline "\_
 <br/>
 <br/>
 
-<h2 id="specific">Specific</h2>
+<h2 id="specific">4.2. Specific <a href="#specific-main">⬆</a></h2>
 
 In this section, I will focus on a more detailed description of the various functionalities that have been introduced in the project
 
 <br/>
 
-<h3 id="adding-data-dynamically">4.2.1. Adding data related to portfolio projects dynamically</h3>
+<h3 id="adding-data-dynamically">4.2.1. Adding data related to portfolio projects dynamically <a href="#specific-main">⬆</a></h3>
 
 Next js allows us to add data to the page in a dynamic way. For this process, files with the markdown extension will be used, in which we can write various texts as in a regular text editor, but we can also save different data as in a normal database.
 
@@ -467,7 +464,7 @@ Below is a visual example of dynamically created projects description:
 
 <br/>
 
-<h3 id="creating-page-dynamically">4.2.2. A dynamic way of creating a page with the content of an article</h3>
+<h3 id="creating-page-dynamically">4.2.2. A dynamic way of creating a page with the content of an article <a href="#specific-main">⬆</a></h3>
 
 ###
 
@@ -720,7 +717,7 @@ Below is a visual example of a dynamically generated article:
 
 <br/>
 
-<h3 id="scroll-btn">4.2.3. A button that allows to quickly return to the top of the page</h3>
+<h3 id="scroll-btn">4.2.3. A button that allows to quickly return to the top of the page <a href="#specific-main">⬆</a></h3>
 
 The project uses the solution that if the user scrolls the page down, a so-called back button will appear on the right side of the page that will allow him to quickly return to the top of the page without scrolling.
 
@@ -814,7 +811,7 @@ As we can see in the example above, it is a component that appears alongside oth
 
 <br/>
 
-<h3 id="loader">4.2.4. A loader before displaying a specific article</h3>
+<h3 id="loader">4.2.4. A loader before displaying a specific article <a href="#specific-main">⬆</a></h3>
 
 When the user uses weaker equipment or has access to weaker internet speed, a situation may arise that pages related to specific articles may load in a few seconds. To increase the user experience of using the application, the so-called loader has been created, which informs the user that the content is being loaded.
 
