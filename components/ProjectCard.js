@@ -81,7 +81,7 @@ export default function ProjectCard({ project, TagComponent }) {
                       <i className="fas fa-at"></i> Check website
                     </a>
                   )}
-                  {TagComponent && (
+                  {TagComponent && project.tags && (
                     <div>
                       {project.tags.map((tag, tagId) => (
                         <TagComponent key={tagId} tag={tag} />
