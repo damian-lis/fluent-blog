@@ -22,11 +22,9 @@ websites:
 - https://www.leafi.pl/
 - https://www.leafi.pl/
 tags:
-  - React
-  - Redux
-  - GraphQL
-  - TypeScript
-  - Material-UI
-  - Node/Express
-  - MongoDB
+  - [React, Redux, TypeScript, Material-UI]
+  - [React(Styled Components/Compound Components)]
+  - [React, Formik, Yup, Material-UI]
+  - [React, GraphQL]
+  - [React, Redux, Material-UI, GoogleLogin, Express, MongoDB]
 ---

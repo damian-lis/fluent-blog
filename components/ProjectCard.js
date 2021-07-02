@@ -5,8 +5,6 @@ export default function ProjectCard({ project, TagComponent }) {
     localDate = '0' + localDate;
   }
 
-  console.log(project);
-
   return (
     <li
       className="relative flex flex-col min-w-0 break-words max-w-4xl m-auto mb-6 shadow-xl rounded-lg mt-10 p-5 border  border-gray-300"
@@ -51,6 +49,13 @@ export default function ProjectCard({ project, TagComponent }) {
                           <i className="fas fa-at"></i> Check website
                         </a>
                       )}
+                      {TagComponent && (
+                        <div>
+                          {project.tags[index].map((tag, tagId) => (
+                            <TagComponent key={tagId} tag={tag} />
+                          ))}
+                        </div>
+                      )}
                     </>
                   ))}
                 </>
@@ -76,16 +81,16 @@ export default function ProjectCard({ project, TagComponent }) {
                       <i className="fas fa-at"></i> Check website
                     </a>
                   )}
+                  {TagComponent && (
+                    <div>
+                      {project.tags.map((tag, tagId) => (
+                        <TagComponent key={tagId} tag={tag} />
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
-            {TagComponent && (
-              <div>
-                {project.tags.map((tag, tagId) => (
-                  <TagComponent key={tagId} tag={tag} />
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </div>
