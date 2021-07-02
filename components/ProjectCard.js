@@ -5,6 +5,8 @@ export default function ProjectCard({ project, TagComponent }) {
     localDate = '0' + localDate;
   }
 
+  console.log(project);
+
   return (
     <li
       className="relative flex flex-col min-w-0 break-words max-w-4xl m-auto mb-6 shadow-xl rounded-lg mt-10 p-5 border  border-gray-300"
@@ -22,25 +24,59 @@ export default function ProjectCard({ project, TagComponent }) {
               <p>{project.description}</p>
             </div>
             <div>
-              {project.github && (
-                <a
-                  target="blank"
-                  rel="noopener noreferrer nofollow"
-                  className="text-sm mb-3 mt-5  text-blue-800 w-max  block bg-gray-100 py-1 px-2 rounded-md hover:underline"
-                  href={project.github}>
-                  {' '}
-                  <i className="fab fa-github"></i> Check repository
-                </a>
-              )}
-              {project.website && (
-                <a
-                  target="blank"
-                  rel="noopener noreferrer nofollow"
-                  className="text-sm mb-5 text-blue-800 w-max block bg-gray-100 py-1 px-2 rounded-md hover:underline"
-                  href={project.website}>
-                  {' '}
-                  <i className="fas fa-at"></i> Check website
-                </a>
+              {project.extended ? (
+                <>
+                  {project.apps.map((app, index) => (
+                    <>
+                      <h2 className="text-l font-medium text-gray-900 mr-2 mt-7">
+                        {index + 1}. {app}
+                      </h2>
+                      {project.githubs[index] && (
+                        <a
+                          target="blank"
+                          rel="noopener noreferrer nofollow"
+                          className="text-sm mb-3 mt-3  text-blue-800 w-max  block bg-gray-100 py-1 px-2 rounded-md hover:underline"
+                          href={project.github}>
+                          {' '}
+                          <i className="fab fa-github"></i> Check repository
+                        </a>
+                      )}
+                      {project.websites[index] && (
+                        <a
+                          target="blank"
+                          rel="noopener noreferrer nofollow"
+                          className="text-sm mb-5 text-blue-800 w-max block bg-gray-100 py-1 px-2 rounded-md hover:underline"
+                          href={project.website}>
+                          {' '}
+                          <i className="fas fa-at"></i> Check website
+                        </a>
+                      )}
+                    </>
+                  ))}
+                </>
+              ) : (
+                <div>
+                  {project.github && (
+                    <a
+                      target="blank"
+                      rel="noopener noreferrer nofollow"
+                      className="text-sm mb-3 mt-5  text-blue-800 w-max  block bg-gray-100 py-1 px-2 rounded-md hover:underline"
+                      href={project.github}>
+                      {' '}
+                      <i className="fab fa-github"></i> Check repository
+                    </a>
+                  )}
+                  {project.website && (
+                    <a
+                      target="blank"
+                      rel="noopener noreferrer nofollow"
+                      className="text-sm mb-5 text-blue-800 w-max block bg-gray-100 py-1 px-2 rounded-md hover:underline"
+                      href={project.website}>
+                      {' '}
+                      <i className="fas fa-at"></i> Check website
+                    </a>
+                  )}
+                </div>
               )}
             </div>
             {TagComponent && (
