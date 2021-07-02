@@ -22,36 +22,36 @@ export default function ProjectCard({ project, TagComponent }) {
               <p>{project.description}</p>
             </div>
             <div>
-              {project.extended ? (
+              {project.apps ? (
                 <>
                   {project.apps.map((app, index) => (
                     <>
                       <h2 className="text-l font-medium text-gray-900 mr-2 mt-7">
-                        {index + 1}. {app}
+                        {index + 1}. {app.title}
                       </h2>
-                      {project.githubs[index] && (
+                      {app.github && (
                         <a
                           target="blank"
                           rel="noopener noreferrer nofollow"
                           className="text-sm mb-3 mt-3  text-blue-800 w-max  block bg-gray-100 py-1 px-2 rounded-md hover:underline"
-                          href={project.github}>
+                          href={app.github}>
                           {' '}
                           <i className="fab fa-github"></i> Check repository
                         </a>
                       )}
-                      {project.websites[index] && (
+                      {app.website && (
                         <a
                           target="blank"
                           rel="noopener noreferrer nofollow"
                           className="text-sm mb-5 text-blue-800 w-max block bg-gray-100 py-1 px-2 rounded-md hover:underline"
-                          href={project.website}>
+                          href={app.website}>
                           {' '}
                           <i className="fas fa-at"></i> Check website
                         </a>
                       )}
-                      {TagComponent && (
+                      {TagComponent && app.tags && (
                         <div>
-                          {project.tags[index].map((tag, tagId) => (
+                          {app.tags.map((tag, tagId) => (
                             <TagComponent key={tagId} tag={tag} />
                           ))}
                         </div>
