@@ -16,6 +16,7 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>Blog - recent posts</title>
+        <link rel="icon" href="/images/icons/logo.svg" />
       </Head>
       <Layout>
         <section>
