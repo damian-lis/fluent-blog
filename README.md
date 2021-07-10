@@ -43,24 +43,22 @@ The following technologies were used in the project:
 
 First of all, you need to make sure you have [Node.js](https://nodejs.org/en/) installed.
 
-<br/>
+If you have Node.js installed clone the github repo.
 
-If you have Node.js installed use the following command:
+Open the project in your favourite IDE and run following script for downloading dependencies:
 
 ```
-npx create-next-app
+npm install
 # or
-yarn create next-app
+yarn install
 ```
-
-<br/>
 
 After that, run the development server:
 
 ```
 npm run dev
 # or
-yarn dev
+yarn run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
