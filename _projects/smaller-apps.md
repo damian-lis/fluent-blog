@@ -4,6 +4,12 @@ description: A set of smaller projects, thanks to which I practiced various tech
 date: 05-05-2020
 apps:
 - {
+  title: My Contact Book Frontend/Backend App (An application that allows you to log into the system in which you can add or remove various contacts)., 
+  github: https://github.com/damian-lis/my-contact-book-frontend-app, 
+  website: https://my-contact-book-frontend-app.vercel.app/,
+  tags: [React, Redux, Material-UI, GoogleLogin, Express, MongoDB]
+  }
+- {
   title: My Task List TS App (application thanks to which you can create various lists of tasks and in them specific tasks to be performed)., 
   github: https://github.com/damian-lis/my-task-list-ts-app,
   website: https://my-task-list-ts-app.herokuapp.com/,
@@ -28,13 +34,6 @@ apps:
   github: https://github.com/damian-lis/my-countries-app, 
   website: https://my-countries-app.vercel.app/,
   tags: [React, GraphQL]
-  }
-
-- {
-  title: My Contact Book Frontend/Backend App (An application that allows you to log into the system in which you can add or remove various contacts)., 
-  github: https://github.com/damian-lis/my-contact-book-frontend-app, 
-  website: https://my-contact-book-frontend-app.vercel.app/,
-  tags: [React, Redux, Material-UI, GoogleLogin, Express, MongoDB]
   }
 ---
 
