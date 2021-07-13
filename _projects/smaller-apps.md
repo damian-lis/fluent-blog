@@ -12,7 +12,7 @@ apps:
 - {
   title: My Task List TS App (application thanks to which you can create various lists of tasks and in them specific tasks to be performed)., 
   github: https://github.com/damian-lis/my-task-list-ts-app,
-  website: https://my-task-list-ts-app.herokuapp.com/,
+  website: https://my-task-list-ts-app.netlify.app/,
   tags: [React, Redux, TypeScript, Material-UI]
   }
 - {
