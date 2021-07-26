@@ -35,5 +35,19 @@ apps:
   website: https://my-countries-app.vercel.app/,
   tags: [React, GraphQL]
   }
+
+- {
+  title: Star Wars App (an app that displays information about planets that appear in 6 movies of the Star Wars series)., 
+  github: https://github.com/damian-lis/star-wars-app, 
+  website: https://star-wars-app-murex.vercel.app/,
+  tags: [React(Styled Components/React Table)]
+  }
+
+- {
+  title: Best Blog (a blog that presents articles and comments downloaded from JSONPlaceholder serice)., 
+  github: https://github.com/damian-lis/best-blog-with-webpack, 
+  website: https://youthful-pasteur-4ea549.netlify.app/,
+  tags: [React without CRA(CSS modules), Redux, JSONplaceholder]
+  }
 ---
 
