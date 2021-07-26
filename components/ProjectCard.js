@@ -25,7 +25,7 @@ export default function ProjectCard({ project, TagComponent }) {
               {project.apps ? (
                 <>
                   {project.apps.map((app, index) => (
-                    <>
+                    <div key={app.title}>
                       <h2 className="text-l font-medium text-gray-900 mr-2 mt-7">
                         {index + 1}. {app.title}
                       </h2>
@@ -56,7 +56,7 @@ export default function ProjectCard({ project, TagComponent }) {
                           ))}
                         </div>
                       )}
-                    </>
+                    </div>
                   ))}
                 </>
               ) : (
